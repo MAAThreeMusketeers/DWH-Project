@@ -311,8 +311,8 @@ create table LINE_ITEM__TL_ (
    PRODUCTID            int                  not null,
    QUANTITY             int                  null,
    DISCOUNTVALUE        int                  null,
-   TOTALVALUE           smallint             null,
-   constraint PK_LINE_ITEM__TL_ primary key (RECEIPTID)
+   TOTALVALUE           int					null,
+   constraint PK_LINE_ITEM__TL_ primary key (RECEIPTID, PRODUCTID)
 )
 go
 
@@ -361,8 +361,8 @@ go
 create table PAYMENT__TP_ (
    RECEIPTID            int                  not null,
    PAYMENTTYPEID        smallint             not null,
-   TOTALVALUE           smallint             null,
-   constraint PK_PAYMENT__TP_ primary key (RECEIPTID)
+   TOTALVALUE           int             null,
+   constraint PK_PAYMENT__TP_ primary key (RECEIPTID, PAYMENTTYPEID)
 )
 go
 

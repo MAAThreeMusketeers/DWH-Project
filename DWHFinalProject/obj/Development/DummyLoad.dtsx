@@ -31,7 +31,7 @@
           DTS:RowDelimiter=""
           DTS:TextQualifier="_x003C_none_x003E_"
           DTS:CodePage="1252"
-          DTS:ConnectionString="F:\Dropbox\NOVA\1st\DateWarehousing\Final_Project\Data\Output Data\DIMCategoryNoMatch.txt">
+          DTS:ConnectionString="C:\Users\Carolina\Desktop\FlatFilesOutput\DIMCategoryNoMatch.txt">
           <DTS:FlatFileColumns>
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -97,7 +97,7 @@
           DTS:RowDelimiter=""
           DTS:TextQualifier="_x003C_none_x003E_"
           DTS:CodePage="1252"
-          DTS:ConnectionString="F:\Dropbox\NOVA\1st\DateWarehousing\Final_Project\Data\Input Data\Departments.txt">
+          DTS:ConnectionString="C:\Users\Carolina\Desktop\FlatFilesInput\Departments.txt">
           <DTS:FlatFileColumns>
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -137,7 +137,7 @@
           DTS:RowDelimiter=""
           DTS:TextQualifier="_x003C_none_x003E_"
           DTS:CodePage="1252"
-          DTS:ConnectionString="F:\Dropbox\NOVA\1st\DateWarehousing\Final_Project\Data\Output Data\DIMPOSNoMatch.txt">
+          DTS:ConnectionString="C:\Users\Carolina\Desktop\FlatFilesOutput\DIMPOSNoMatch.txt">
           <DTS:FlatFileColumns>
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -194,7 +194,7 @@
           DTS:RowDelimiter=""
           DTS:TextQualifier="_x003C_none_x003E_"
           DTS:CodePage="1252"
-          DTS:ConnectionString="F:\Dropbox\NOVA\1st\DateWarehousing\Final_Project\Data\Input Data\PaymentTypes.txt">
+          DTS:ConnectionString="C:\Users\Carolina\Desktop\FlatFilesInput\PaymentTypes.txt">
           <DTS:FlatFileColumns>
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -233,7 +233,7 @@
           DTS:RowDelimiter=""
           DTS:TextQualifier="_x003C_none_x003E_"
           DTS:CodePage="1252"
-          DTS:ConnectionString="F:\Dropbox\NOVA\1st\DateWarehousing\Final_Project\Data\Input Data\POS.txt">
+          DTS:ConnectionString="C:\Users\Carolina\Desktop\FlatFilesInput\POS.txt">
           <DTS:FlatFileColumns>
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -290,7 +290,7 @@
           DTS:RowDelimiter=""
           DTS:TextQualifier="_x003C_none_x003E_"
           DTS:CodePage="1252"
-          DTS:ConnectionString="F:\Dropbox\NOVA\1st\DateWarehousing\Final_Project\Data\Output Data\DIMProductNoMatch.txt">
+          DTS:ConnectionString="C:\Users\Carolina\Desktop\FlatFilesOutput\DIMProductNoMatch.txt">
           <DTS:FlatFileColumns>
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -392,7 +392,7 @@
           DTS:RowDelimiter=""
           DTS:TextQualifier="_x003C_none_x003E_"
           DTS:CodePage="1252"
-          DTS:ConnectionString="F:\Dropbox\NOVA\1st\DateWarehousing\Final_Project\Data\Input Data\Products.txt">
+          DTS:ConnectionString="C:\Users\Carolina\Desktop\FlatFilesInput\Products.txt">
           <DTS:FlatFileColumns>
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -485,7 +485,7 @@
           DTS:RowDelimiter=""
           DTS:TextQualifier="_x003C_none_x003E_"
           DTS:CodePage="1252"
-          DTS:ConnectionString="F:\Dropbox\NOVA\1st\DateWarehousing\Final_Project\Data\Output Data\DIMSectionNoMatch.txt">
+          DTS:ConnectionString="C:\Users\Carolina\Desktop\FlatFilesOutput\DIMSectionNoMatch.txt">
           <DTS:FlatFileColumns>
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -542,7 +542,7 @@
           DTS:RowDelimiter=""
           DTS:TextQualifier="_x003C_none_x003E_"
           DTS:CodePage="1252"
-          DTS:ConnectionString="F:\Dropbox\NOVA\1st\DateWarehousing\Final_Project\Data\Input Data\Sections.txt">
+          DTS:ConnectionString="C:\Users\Carolina\Desktop\FlatFilesInput\Sections.txt">
           <DTS:FlatFileColumns>
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -590,7 +590,7 @@
           DTS:RowDelimiter=""
           DTS:TextQualifier="_x003C_none_x003E_"
           DTS:CodePage="1252"
-          DTS:ConnectionString="F:\Dropbox\NOVA\1st\DateWarehousing\Final_Project\Data\Input Data\Stores.txt">
+          DTS:ConnectionString="C:\Users\Carolina\Desktop\FlatFilesInput\Stores.txt">
           <DTS:FlatFileColumns>
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -629,7 +629,7 @@
           DTS:RowDelimiter=""
           DTS:TextQualifier="_x003C_none_x003E_"
           DTS:CodePage="1252"
-          DTS:ConnectionString="F:\Dropbox\NOVA\1st\DateWarehousing\Final_Project\Data\Output Data\DIMSubcategoryNoMatch.txt">
+          DTS:ConnectionString="C:\Users\Carolina\Desktop\FlatFilesOutput\DIMSubcategoryNoMatch.txt">
           <DTS:FlatFileColumns>
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -704,7 +704,7 @@
           DTS:RowDelimiter=""
           DTS:TextQualifier="_x003C_none_x003E_"
           DTS:CodePage="1252"
-          DTS:ConnectionString="F:\Dropbox\NOVA\1st\DateWarehousing\Final_Project\Data\Input Data\SubCategories.txt">
+          DTS:ConnectionString="C:\Users\Carolina\Desktop\FlatFilesInput\SubCategories.txt">
           <DTS:FlatFileColumns>
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"

@@ -11,8 +11,8 @@
   DTS:LocaleID="2070"
   DTS:ObjectName="Master"
   DTS:PackageType="5"
-  DTS:VersionBuild="6"
-  DTS:VersionGUID="{F49BD2D8-2F83-4ABC-963D-2BDC174CA8BC}">
+  DTS:VersionBuild="7"
+  DTS:VersionGUID="{D8E204DF-8EF6-49EF-BD50-32B93D007575}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables />
@@ -75,53 +75,15 @@
         </ExecutePackageTask>
       </DTS:ObjectData>
     </DTS:Executable>
-    <DTS:Executable
-      DTS:refId="Package\Execute Dummy"
-      DTS:CreationName="Microsoft.ExecutePackageTask"
-      DTS:Description="Execute Package Task"
-      DTS:Disabled="True"
-      DTS:DTSID="{dfb39df6-61b0-4a1d-8a6d-29b4436ce6cc}"
-      DTS:ExecutableType="Microsoft.ExecutePackageTask"
-      DTS:LocaleID="-1"
-      DTS:ObjectName="Execute Dummy"
-      DTS:TaskContact="Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
-      <DTS:Variables />
-      <DTS:ObjectData>
-        <ExecutePackageTask>
-          <UseProjectReference>True</UseProjectReference>
-          <PackageName>DummyLoad.dtsx</PackageName>
-          <ParameterAssignment>
-            <ParameterName>FlatFilesInput</ParameterName>
-            <BindedVariableOrParameterName>$Project::FlatFilesInput</BindedVariableOrParameterName>
-          </ParameterAssignment>
-          <ParameterAssignment>
-            <ParameterName>FlatFilesOutput</ParameterName>
-            <BindedVariableOrParameterName>$Project::FlatFilesOutput</BindedVariableOrParameterName>
-          </ParameterAssignment>
-          <ParameterAssignment>
-            <ParameterName>ServerName</ParameterName>
-            <BindedVariableOrParameterName>$Project::ServerName</BindedVariableOrParameterName>
-          </ParameterAssignment>
-        </ExecutePackageTask>
-      </DTS:ObjectData>
-    </DTS:Executable>
   </DTS:Executables>
   <DTS:PrecedenceConstraints>
     <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Constraint]"
       DTS:CreationName=""
-      DTS:DTSID="{07FFD202-926C-4925-BC64-955466EAE479}"
+      DTS:DTSID="{47A19DE6-F97A-40D5-B763-87B75A8E7613}"
       DTS:From="Package\Execute DIMload"
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint"
-      DTS:To="Package\Execute Dummy" />
-    <DTS:PrecedenceConstraint
-      DTS:refId="Package.PrecedenceConstraints[Constraint 1]"
-      DTS:CreationName=""
-      DTS:DTSID="{CF21DB63-4C78-4CF0-8B5B-D5901E44D9A4}"
-      DTS:From="Package\Execute Dummy"
-      DTS:LogicalAnd="True"
-      DTS:ObjectName="Constraint 1"
       DTS:To="Package\Execute DATAload" />
   </DTS:PrecedenceConstraints>
   <DTS:DesignTimeProperties><![CDATA[<?xml version="1.0"?>
@@ -135,79 +97,29 @@
     design-time-name="Package">
     <LayoutInfo>
       <GraphLayout
-        Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
+        Capacity="4" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
           Size="165,42"
           Id="Package\Execute DATAload"
-          TopLeft="81,320" />
+          TopLeft="83,128" />
         <NodeLayout
           Size="160,42"
           Id="Package\Execute DIMload"
-          TopLeft="96,83" />
-        <NodeLayout
-          Size="156,42"
-          Id="Package\Execute Dummy"
-          TopLeft="382,198" />
+          TopLeft="81,41" />
         <EdgeLayout
           Id="Package.PrecedenceConstraints[Constraint]"
-          TopLeft="176,125">
+          TopLeft="163.25,83">
           <EdgeLayout.Curve>
             <mssgle:Curve
               StartConnector="{assembly:Null}"
-              EndConnector="284,73"
+              EndConnector="0,45"
               Start="0,0"
-              End="284,65.5">
+              End="0,37.5">
               <mssgle:Curve.Segments>
                 <mssgle:SegmentCollection
                   Capacity="5">
                   <mssgle:LineSegment
-                    End="0,32.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,32.5"
-                    Point2="0,36.5"
-                    Point3="4,36.5" />
-                  <mssgle:LineSegment
-                    End="280,36.5" />
-                  <mssgle:CubicBezierSegment
-                    Point1="280,36.5"
-                    Point2="284,36.5"
-                    Point3="284,40.5" />
-                  <mssgle:LineSegment
-                    End="284,65.5" />
-                </mssgle:SegmentCollection>
-              </mssgle:Curve.Segments>
-            </mssgle:Curve>
-          </EdgeLayout.Curve>
-          <EdgeLayout.Labels>
-            <EdgeLabelCollection />
-          </EdgeLayout.Labels>
-        </EdgeLayout>
-        <EdgeLayout
-          Id="Package.PrecedenceConstraints[Constraint 1]"
-          TopLeft="460,240">
-          <EdgeLayout.Curve>
-            <mssgle:Curve
-              StartConnector="{assembly:Null}"
-              EndConnector="-296.5,80"
-              Start="0,0"
-              End="-296.5,72.5">
-              <mssgle:Curve.Segments>
-                <mssgle:SegmentCollection
-                  Capacity="5">
-                  <mssgle:LineSegment
-                    End="0,36" />
-                  <mssgle:CubicBezierSegment
-                    Point1="0,36"
-                    Point2="0,40"
-                    Point3="-4,40" />
-                  <mssgle:LineSegment
-                    End="-292.5,40" />
-                  <mssgle:CubicBezierSegment
-                    Point1="-292.5,40"
-                    Point2="-296.5,40"
-                    Point3="-296.5,44" />
-                  <mssgle:LineSegment
-                    End="-296.5,72.5" />
+                    End="0,37.5" />
                 </mssgle:SegmentCollection>
               </mssgle:Curve.Segments>
             </mssgle:Curve>

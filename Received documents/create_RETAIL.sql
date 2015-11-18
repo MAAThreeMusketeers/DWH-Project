@@ -420,7 +420,7 @@ go
 /*==============================================================*/
 create table PRODUCT (
    PRODUCTID            int                  not null,
-   PRODUCTDESCRIPTION   nvarchar(30)         null,
+   PRODUCTDESCRIPTION   nvarchar(70)         null,
    PRODUCTCLASS         char(1)              null,
    PRODUCTSUBCLASS      char(1)              null,
    DEPARTMENTID         char(2)              not null,

@@ -2,28 +2,33 @@
 <BuildLog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <ProjectInfo>
     <Name>DWHFinalProject</Name>
-    <LastWriteTime>2015-11-18T17:22:38.5005289Z</LastWriteTime>
+    <LastWriteTime>2015-11-30T18:58:32.6564679Z</LastWriteTime>
     <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
   </ProjectInfo>
   <LastBuildInfos>
     <ProjectBuildItemInfo>
       <Name>DIMload.dtsx</Name>
-      <LastWriteTime>2015-11-16T22:59:06.3095961Z</LastWriteTime>
-      <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
-    </ProjectBuildItemInfo>
-    <ProjectBuildItemInfo>
-      <Name>DATAload.dtsx</Name>
-      <LastWriteTime>2015-11-18T17:21:29.3884507Z</LastWriteTime>
+      <LastWriteTime>2015-11-30T12:35:49.0761858Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>Master.dtsx</Name>
-      <LastWriteTime>2015-11-18T16:23:50.1442114Z</LastWriteTime>
+      <LastWriteTime>2015-11-30T18:52:12.1073161Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>ReLoad.dtsx</Name>
-      <LastWriteTime>2015-11-18T16:16:50.0210318Z</LastWriteTime>
+      <LastWriteTime>2015-11-30T14:20:11.1901128Z</LastWriteTime>
+      <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
+    </ProjectBuildItemInfo>
+    <ProjectBuildItemInfo>
+      <Name>MasterLOAD.dtsx</Name>
+      <LastWriteTime>2015-11-30T21:10:43.4895064Z</LastWriteTime>
+      <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
+    </ProjectBuildItemInfo>
+    <ProjectBuildItemInfo>
+      <Name>Extract_to_STG.dtsx</Name>
+      <LastWriteTime>2015-11-30T22:38:20.5056922Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
   </LastBuildInfos>

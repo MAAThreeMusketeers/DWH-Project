@@ -235,7 +235,7 @@ create table DIMCLIENT (
    CLIENTKEY            numeric              identity,
    CLIENTID             int                  not null,
    GENDER               char(1)              null,
-   DATEOFBIRTH          datetime             null,
+   DATEOFBIRTH          date		         null,
    AGEGROUP             nvarchar(50)         null,
    constraint PK_DIMCLIENT primary key (CLIENTKEY)
 )

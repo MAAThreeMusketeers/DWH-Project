@@ -1,18 +1,18 @@
-﻿<?xml version="1.0"?>
+<?xml version="1.0"?>
 <DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
   DTS:refId="Package"
   DTS:CreationDate="11/5/2015 12:03:01 AM"
   DTS:CreationName="Microsoft.Package"
   DTS:CreatorComputerName="BEYKA-THINK"
   DTS:CreatorName="beyka-THINK\beyka"
-  DTS:DTSID="{1DDE68B1-1DF5-42FB-B41E-1D5CEBDC98D7}"
+  DTS:DTSID="{55820E87-BA42-44B5-991B-1CB7B46D66D5}"
   DTS:ExecutableType="Microsoft.Package"
   DTS:LastModifiedProductVersion="12.0.2430.0"
   DTS:LocaleID="2070"
   DTS:ObjectName="MasterEXTRACT"
   DTS:PackageType="5"
   DTS:VersionBuild="8"
-  DTS:VersionGUID="{38DC2954-72F0-4777-B06A-500CFDEA6FE4}">
+  DTS:VersionGUID="{61BEA596-FEC6-453D-A908-6E1A4FEBCB6E}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables />
@@ -21,7 +21,7 @@
       DTS:refId="Package\Execute DATAload"
       DTS:CreationName="Microsoft.ExecutePackageTask"
       DTS:Description="Execute Package Task"
-      DTS:DTSID="{30816C19-7639-46B5-9365-4C58696B9B09}"
+      DTS:DTSID="{3B9B3647-D5DA-4151-8EE1-8DDF3A9A64C4}"
       DTS:ExecutableType="Microsoft.ExecutePackageTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="Execute DATAload"
@@ -50,7 +50,7 @@
       DTS:refId="Package\Execute DIMload"
       DTS:CreationName="Microsoft.ExecutePackageTask"
       DTS:Description="Execute Package Task"
-      DTS:DTSID="{8AB0C034-95DF-4E76-95B9-067E8DC7EA76}"
+      DTS:DTSID="{F4D8323C-26BD-49C5-A9B9-5F1A50C6EAA9}"
       DTS:ExecutableType="Microsoft.ExecutePackageTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="Execute DIMload"
@@ -80,7 +80,7 @@
     <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Constraint]"
       DTS:CreationName=""
-      DTS:DTSID="{47A19DE6-F97A-40D5-B763-87B75A8E7613}"
+      DTS:DTSID="{13F76105-17DE-45EF-82EA-C4DDA0C62F58}"
       DTS:From="Package\Execute DIMload"
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint"

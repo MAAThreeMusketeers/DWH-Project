@@ -1,18 +1,18 @@
-﻿<?xml version="1.0"?>
+<?xml version="1.0"?>
 <DTS:Executable xmlns:DTS="www.microsoft.com/SqlServer/Dts"
   DTS:refId="Package"
   DTS:CreationDate="11/26/2015 12:37:24 AM"
   DTS:CreationName="Microsoft.Package"
   DTS:CreatorComputerName="PC-CLOSER"
   DTS:CreatorName="PC-CLOSER\closer"
-  DTS:DTSID="{8C50AFB5-ED8C-4861-A718-11BC6EF65D59}"
+  DTS:DTSID="{39792418-BF5E-4004-B085-8120DE6FE147}"
   DTS:ExecutableType="Microsoft.Package"
   DTS:LastModifiedProductVersion="12.0.2430.0"
   DTS:LocaleID="2070"
   DTS:ObjectName="ETL"
   DTS:PackageType="5"
   DTS:VersionBuild="1"
-  DTS:VersionGUID="{1826E82B-E9A6-421A-B4A2-AD39C1758EE6}">
+  DTS:VersionGUID="{F2073458-E72A-43BD-B1EF-768F2E00DCDB}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables />
@@ -21,7 +21,7 @@
       DTS:refId="Package\Extract"
       DTS:CreationName="Microsoft.ExecutePackageTask"
       DTS:Description="Execute Package Task"
-      DTS:DTSID="{1D810A56-CCFE-45BE-B19E-BF6C9F3E1180}"
+      DTS:DTSID="{E299B866-1160-4A8D-B669-9646CEDD4437}"
       DTS:ExecutableType="Microsoft.ExecutePackageTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="Extract"
@@ -38,7 +38,7 @@
       DTS:refId="Package\Load"
       DTS:CreationName="Microsoft.ExecutePackageTask"
       DTS:Description="Execute Package Task"
-      DTS:DTSID="{7D9A5947-EFAA-4AB7-8C5A-8B5573E793D1}"
+      DTS:DTSID="{B6B2A4F4-3BE7-43C6-B75B-AA3A9E77B29A}"
       DTS:ExecutableType="Microsoft.ExecutePackageTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="Load"
@@ -56,7 +56,7 @@
       DTS:CreationName="Microsoft.ExecutePackageTask"
       DTS:Description="Execute Package Task"
       DTS:Disabled="True"
-      DTS:DTSID="{27316D6F-A2F1-4287-8EF3-613811269495}"
+      DTS:DTSID="{714B04EB-E888-4C88-814A-4731F5E22258}"
       DTS:ExecutableType="Microsoft.ExecutePackageTask"
       DTS:LocaleID="-1"
       DTS:ObjectName="Transform"
@@ -73,7 +73,7 @@
     <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Constraint]"
       DTS:CreationName=""
-      DTS:DTSID="{7A043AD5-56DE-4284-B29C-C20576FFD99D}"
+      DTS:DTSID="{0D3E0B8E-CBD1-4519-A997-8BD79505D46C}"
       DTS:From="Package\Extract"
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint"
@@ -81,7 +81,7 @@
     <DTS:PrecedenceConstraint
       DTS:refId="Package.PrecedenceConstraints[Constraint 1]"
       DTS:CreationName=""
-      DTS:DTSID="{AAB2FF6D-DE1A-45B9-8E73-4718632BACC0}"
+      DTS:DTSID="{A71365EE-BF70-4173-A7B1-B336E1BAF248}"
       DTS:From="Package\Transform"
       DTS:LogicalAnd="True"
       DTS:ObjectName="Constraint 1"

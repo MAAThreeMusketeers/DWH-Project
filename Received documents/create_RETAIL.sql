@@ -275,6 +275,7 @@ create table CLIENT (
    CLIENTCARD           smallint             null,
    GENDER               char(1)              null,
    DATEOFBIRTH          char(10)             null,
+   AGEGROUP             nvarchar(50)         not null,
    constraint PK_CLIENT primary key nonclustered (CLIENTID)
 )
 go

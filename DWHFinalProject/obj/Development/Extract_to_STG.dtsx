@@ -158,7 +158,7 @@
           DTS:RowDelimiter=""
           DTS:TextQualifier="_x003C_none_x003E_"
           DTS:CodePage="1252"
-          DTS:ConnectionString="C:\Users\Carolina\Desktop\FlatFilesOutput\DATALineItemNoMatch.txt">
+          DTS:ConnectionString="F:\Dropbox\NOVA\1st\DateWarehousing\Final_Project\Data\Output Data\DATALineItemNoMatch.txt">
           <DTS:FlatFileColumns>
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -233,7 +233,7 @@
           DTS:RowDelimiter=""
           DTS:TextQualifier="_x003C_none_x003E_"
           DTS:CodePage="1252"
-          DTS:ConnectionString="C:\Users\Carolina\Desktop\FlatFilesOutput\DATAPaymentError.txt">
+          DTS:ConnectionString="F:\Dropbox\NOVA\1st\DateWarehousing\Final_Project\Data\Output Data\DATAPaymentError.txt">
           <DTS:FlatFileColumns>
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -371,7 +371,7 @@
           DTS:RowDelimiter=""
           DTS:TextQualifier="_x003C_none_x003E_"
           DTS:CodePage="1252"
-          DTS:ConnectionString="C:\Users\Carolina\Desktop\FlatFilesOutput\DATAPaymentNoMatch.txt">
+          DTS:ConnectionString="F:\Dropbox\NOVA\1st\DateWarehousing\Final_Project\Data\Output Data\DATAPaymentNoMatch.txt">
           <DTS:FlatFileColumns>
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -428,7 +428,7 @@
           DTS:RowDelimiter=""
           DTS:TextQualifier="_x003C_none_x003E_"
           DTS:CodePage="1252"
-          DTS:ConnectionString="C:\Users\Carolina\Desktop\FlatFilesOutput\DATAPaymentNoMatchReceipt.txt">
+          DTS:ConnectionString="F:\Dropbox\NOVA\1st\DateWarehousing\Final_Project\Data\Output Data\DATAPaymentNoMatchReceipt.txt">
           <DTS:FlatFileColumns>
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -680,7 +680,7 @@
           DTS:RowDelimiter=""
           DTS:TextQualifier="_x003C_none_x003E_"
           DTS:CodePage="1252"
-          DTS:ConnectionString="C:\Users\Carolina\Desktop\FlatFilesOutput\DATAReceiptNoMatch.txt">
+          DTS:ConnectionString="F:\Dropbox\NOVA\1st\DateWarehousing\Final_Project\Data\Output Data\DATAReceiptNoMatch.txt">
           <DTS:FlatFileColumns>
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -818,7 +818,7 @@
         <DTS:ObjectData>
           <ForEachFileEnumeratorProperties>
             <FEFEProperty
-              Folder="C:\Users\Carolina\Desktop\FlatFilesInput\NewData\" />
+              Folder="F:\Dropbox\NOVA\1st\DateWarehousing\Final_Project\Data\NewData\" />
             <FEFEProperty
               FileSpec="tl_*.txt" />
             <FEFEProperty
@@ -2012,7 +2012,7 @@ where [refTable].[RECEIPTID] = ?</property>
         <DTS:ObjectData>
           <ForEachFileEnumeratorProperties>
             <FEFEProperty
-              Folder="C:\Users\Carolina\Desktop\FlatFilesInput\NewData\" />
+              Folder="F:\Dropbox\NOVA\1st\DateWarehousing\Final_Project\Data\NewData\" />
             <FEFEProperty
               FileSpec="tp_*.txt" />
             <FEFEProperty
@@ -2614,7 +2614,7 @@ where [refTable].[PAYMENTTYPEID] = ?</property>
                       containsID="true"
                       dataType="System.String"
                       description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
-                      name="ParameterMap">#{Package\CycleThrough Payment\Data Flow Payment\233:invalid};</property>
+                      name="ParameterMap">#{Package\CycleThrough Payment\Data Flow Payment\637:invalid};</property>
                     <property
                       dataType="System.Int32"
                       description="Specifies the column code page to use when code page information is unavailable from the data source."
@@ -2756,7 +2756,7 @@ where [refTable].[RECEIPTID] = ?</property>
                       containsID="true"
                       dataType="System.String"
                       description="Specifies the list of lineage identifiers that map to the parameters that the SQL statement in the SQLCommand property uses. Entries in the list are separated by semicolons."
-                      name="ParameterMap">#{Package\CycleThrough Payment\Data Flow Payment\234:invalid};</property>
+                      name="ParameterMap">#{Package\CycleThrough Payment\Data Flow Payment\638:invalid};</property>
                     <property
                       dataType="System.Int32"
                       description="Specifies the column code page to use when code page information is unavailable from the data source."
@@ -3207,7 +3207,7 @@ where [refTable].[RECEIPTID] = ?</property>
         <DTS:ObjectData>
           <ForEachFileEnumeratorProperties>
             <FEFEProperty
-              Folder="C:\Users\Carolina\Desktop\FlatFilesInput\NewData\" />
+              Folder="F:\Dropbox\NOVA\1st\DateWarehousing\Final_Project\Data\NewData\" />
             <FEFEProperty
               FileSpec="t_*.txt" />
             <FEFEProperty

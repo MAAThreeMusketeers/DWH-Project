@@ -2,33 +2,33 @@
 <BuildLog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <ProjectInfo>
     <Name>DWHFinalProject</Name>
-    <LastWriteTime>2015-11-30T18:58:32.6564679Z</LastWriteTime>
+    <LastWriteTime>2015-12-01T22:42:59.5656202Z</LastWriteTime>
     <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
   </ProjectInfo>
   <LastBuildInfos>
     <ProjectBuildItemInfo>
       <Name>DIMload.dtsx</Name>
-      <LastWriteTime>2015-11-30T12:35:49.0761858Z</LastWriteTime>
+      <LastWriteTime>2015-12-01T20:59:54.9020604Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>Master.dtsx</Name>
-      <LastWriteTime>2015-11-30T18:52:12.1073161Z</LastWriteTime>
+      <LastWriteTime>2015-12-01T20:59:55.2202727Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>ReLoad.dtsx</Name>
-      <LastWriteTime>2015-11-30T14:20:11.1901128Z</LastWriteTime>
+      <LastWriteTime>2015-12-01T20:59:55.4464237Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>MasterLOAD.dtsx</Name>
-      <LastWriteTime>2015-11-30T21:10:43.4895064Z</LastWriteTime>
+      <LastWriteTime>2015-12-02T00:34:07.6132563Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>Extract_to_STG.dtsx</Name>
-      <LastWriteTime>2015-11-30T22:38:20.5056922Z</LastWriteTime>
+      <LastWriteTime>2015-12-01T21:34:00.7845276Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
   </LastBuildInfos>

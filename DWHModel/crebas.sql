@@ -1,3 +1,5 @@
+USE DWH
+
 /*==============================================================*/
 /* DBMS name:      Microsoft SQL Server 2012                    */
 /* Created on:     24/11/2015 21:21:56                          */
@@ -245,27 +247,24 @@ go
 /* Table: DIMDATE                                               */
 /*==============================================================*/
 create table DIMDATE (
-   DATEKEY              numeric              identity,
-   DATE                 datetime             not null,
-   YEAR                 char(4)              null,
-   MONTH                varchar(2)           null,
-   MONTHNAME            varchar(9)           null,
-   DAYOFYEAR            varchar(3)           null,
-   DAYOFMONTH           varchar(2)           null,
-   DAYNAME              varchar(9)           null,
-   MMYYYY               char(6)              null,
-   CALENDARYEAR         char(4)              null,
-   CALENDARQUARTER      char(1)              null,
-   CALENDARMONTH        varchar(9)           null,
-   CALENDARMONTHOFYEAR  varchar(2)           null,
-   CALENDARWEEK         varchar(2)           null,
-   CALENDARWEEKOFYEAR   varchar(2)           null,
-   ISWEEKEND            bit                  null,
-   ISWORKDAY            bit                  null,
-   ISHOLIDAY            bit                  null,
-   ISPROMOTION          bit                  null,
-   YEARTODATE           bit                  null,
-   SELLINGSEASON        nvarchar(50)         null,
+   DATEKEY              int					 not null,
+   DATE                 date             not null,
+   CalendarYear                 int              null,
+   CalendarQuarter                int           null,
+   CalendarMonthOfYear            int           null,
+   CalendarWeekOfYear            int           null,
+   CalendarDayOfYear           int           null,
+   CalendarWeekOfMonth              int           null,
+   CalendarDayOfMonth               int              null,
+   CalendarMonthName         varchar(9)              null,
+   CalendarDayName      varchar(9)              null,
+   CalendarMonthYear        varchar(13)           null,
+   IsWeekend  bit           null,
+   IsWorkDay         bit           null,
+   IsHoliday   bit           null,
+   IsPromotion            bit                  null,
+   IsLeapYear            bit                  null,
+   SellingSeason           nvarchar(50)                  null,
    constraint PK_DIMDATE primary key (DATEKEY)
 )
 go
@@ -286,7 +285,11 @@ go
 create table DIMPAYMENT (
    PAYMENTTYPEKEY       numeric              identity,
    PAYMENTTYPEID        smallint             not null,
+   RECEIPTID			int				     not null,
+   NOOFDIFFERENTPAYMENTS int				 not null,
+   MAINPAYMENTTYPEID	smallint			 not null,
    PAYMENTTYPEDESCRIPTION nvarchar(50)         null,
+
    constraint PK_DIMPAYMENT primary key (PAYMENTTYPEKEY)
 )
 go
@@ -359,16 +362,16 @@ create table FACTTABLE (
    PAYMENTTYPEKEY       numeric              not null,
    RECEIPTKEY           numeric              not null,
    AGEGROUPKEY          numeric              null,
-   DATEKEY              numeric              not null,
+   DATEKEY              int              not null,
    SECTIONKEY           numeric              not null,
    PRODUCTKEY           numeric              not null,
    CLIENTKEY            numeric              not null,
-   ORIGINKEY            varchar(30)          not null,
-   TRANSACTIONBEGHOUR   datetime             null,
+   ORIGINKEY            varchar(30)/*whats this?*/          not null,
+/*   TRANSACTIONBEGHOUR   datetime             null,
    TRANSACTIONENDHOUR   datetime             null,
-   TRANSACTIONDURATION  varchar(8)           null,
+   TRANSACTIONDURATION  varchar(8)  + change this one to int, and we will measure in minutes         null,*/
    DISCOUNTVALUE        int                  null,
-   TOTALPAYED           int                  null,
+   /*TOTALPAYED           int                  null,*/
    QUANTITY             int                  null,
    TOTALVALUE           smallint             null,
    constraint PK_FACTTABLE primary key (LINEITEMKEY)

@@ -31,7 +31,7 @@
           DTS:RowDelimiter=""
           DTS:TextQualifier="_x003C_none_x003E_"
           DTS:CodePage="1252"
-          DTS:ConnectionString="C:\Users\Carolina\Desktop\FlatFilesOutput\CategoryCorrected.txt">
+          DTS:ConnectionString="F:\Dropbox\NOVA\1st\DateWarehousing\Final_Project\Data\Output Data\CategoryCorrected.txt">
           <DTS:FlatFileColumns>
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -124,7 +124,7 @@
           DTS:RowDelimiter=""
           DTS:TextQualifier="_x003C_none_x003E_"
           DTS:CodePage="1252"
-          DTS:ConnectionString="C:\Users\Carolina\Desktop\FlatFilesOutput\DepartmentCorrected.txt">
+          DTS:ConnectionString="F:\Dropbox\NOVA\1st\DateWarehousing\Final_Project\Data\Output Data\DepartmentCorrected.txt">
           <DTS:FlatFileColumns>
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -217,7 +217,7 @@
           DTS:RowDelimiter=""
           DTS:TextQualifier="_x003C_none_x003E_"
           DTS:CodePage="1252"
-          DTS:ConnectionString="C:\Users\Carolina\Desktop\FlatFilesOutput\DIMProductNoMatch.txt">
+          DTS:ConnectionString="F:\Dropbox\NOVA\1st\DateWarehousing\Final_Project\Data\Output Data\DIMProductNoMatch.txt">
           <DTS:FlatFileColumns>
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -310,7 +310,7 @@
           DTS:RowDelimiter=""
           DTS:TextQualifier="_x003C_none_x003E_"
           DTS:CodePage="1252"
-          DTS:ConnectionString="C:\Users\Carolina\Desktop\FlatFilesOutput\SectionCorrected.txt">
+          DTS:ConnectionString="F:\Dropbox\NOVA\1st\DateWarehousing\Final_Project\Data\Output Data\SectionCorrected.txt">
           <DTS:FlatFileColumns>
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -403,7 +403,7 @@
           DTS:RowDelimiter=""
           DTS:TextQualifier="_x003C_none_x003E_"
           DTS:CodePage="1252"
-          DTS:ConnectionString="C:\Users\Carolina\Desktop\FlatFilesOutput\SubcategoryCorrected.txt">
+          DTS:ConnectionString="F:\Dropbox\NOVA\1st\DateWarehousing\Final_Project\Data\Output Data\SubcategoryCorrected.txt">
           <DTS:FlatFileColumns>
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -3367,9 +3367,9 @@ where [refTable].[DEPARTMENTID] = ? and [refTable].[SECTIONID] = ?</property>
               startId="Package\Correct NoMatchProducts\Lookup to Department.Outputs[Lookup Match Output]" />
             <path
               refId="Package\Correct NoMatchProducts.Paths[Lookup No Match Output2]"
-              endId="Package\Correct NoMatchProducts\Set Section to Unknown.Inputs[Derived Column Input]"
+              endId="Package\Correct NoMatchProducts\Set Category to Unknown.Inputs[Derived Column Input]"
               name="Lookup No Match Output"
-              startId="Package\Correct NoMatchProducts\Lookup to Section.Outputs[Lookup No Match Output]" />
+              startId="Package\Correct NoMatchProducts\Lookup to Category.Outputs[Lookup No Match Output]" />
             <path
               refId="Package\Correct NoMatchProducts.Paths[Lookup No Match Output1]"
               endId="Package\Correct NoMatchProducts\Set Department to Unknown.Inputs[Derived Column Input]"
@@ -3377,9 +3377,9 @@ where [refTable].[DEPARTMENTID] = ? and [refTable].[SECTIONID] = ?</property>
               startId="Package\Correct NoMatchProducts\Lookup to Department.Outputs[Lookup No Match Output]" />
             <path
               refId="Package\Correct NoMatchProducts.Paths[Lookup No Match Output]"
-              endId="Package\Correct NoMatchProducts\Set Category to Unknown.Inputs[Derived Column Input]"
+              endId="Package\Correct NoMatchProducts\Set Section to Unknown.Inputs[Derived Column Input]"
               name="Lookup No Match Output"
-              startId="Package\Correct NoMatchProducts\Lookup to Category.Outputs[Lookup No Match Output]" />
+              startId="Package\Correct NoMatchProducts\Lookup to Section.Outputs[Lookup No Match Output]" />
             <path
               refId="Package\Correct NoMatchProducts.Paths[Multicast Output 1]"
               endId="Package\Correct NoMatchProducts\Sort to Remove Duplicates 1.Inputs[Sort Input]"
@@ -8156,7 +8156,7 @@ where [refTable].[DEPARTMENTID] = ? and [refTable].[SECTIONID] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Correct NoMatchProducts.Paths[Lookup No Match Output]"
+          Id="Package\Correct NoMatchProducts.Paths[Lookup No Match Output2]"
           TopLeft="321,154">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -8228,7 +8228,7 @@ where [refTable].[DEPARTMENTID] = ? and [refTable].[SECTIONID] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Correct NoMatchProducts.Paths[Lookup No Match Output2]"
+          Id="Package\Correct NoMatchProducts.Paths[Lookup No Match Output]"
           TopLeft="323,299">
           <EdgeLayout.Curve>
             <mssgle:Curve

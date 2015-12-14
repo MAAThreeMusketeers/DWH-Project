@@ -11,8 +11,8 @@
   DTS:LocaleID="2070"
   DTS:ObjectName="Master"
   DTS:PackageType="5"
-  DTS:VersionBuild="24"
-  DTS:VersionGUID="{DF166589-92D3-457B-973C-A4D6BAFC1DCF}">
+  DTS:VersionBuild="28"
+  DTS:VersionGUID="{02AC4E2B-577C-4A81-A179-A883F20C083B}">
   <DTS:Property
     DTS:Name="PackageFormatVersion">8</DTS:Property>
   <DTS:Variables />
@@ -28,19 +28,19 @@
       <DTS:Variables />
       <DTS:Executables>
         <DTS:Executable
-          DTS:refId="Package\EXTRACT &amp; TRANSFORM\Execute Extract to STG"
+          DTS:refId="Package\EXTRACT &amp; TRANSFORM\Execute Extract to SA"
           DTS:CreationName="Microsoft.ExecutePackageTask"
           DTS:Description="Execute Package Task"
           DTS:DTSID="{8AB0C034-95DF-4E76-95B9-067E8DC7EA76}"
           DTS:ExecutableType="Microsoft.ExecutePackageTask"
           DTS:LocaleID="-1"
-          DTS:ObjectName="Execute Extract to STG"
+          DTS:ObjectName="Execute Extract to SA"
           DTS:TaskContact="Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
           <DTS:Variables />
           <DTS:ObjectData>
             <ExecutePackageTask>
               <UseProjectReference>True</UseProjectReference>
-              <PackageName>Extract_to_STG.dtsx</PackageName>
+              <PackageName>Extract_to_SA.dtsx</PackageName>
               <ParameterAssignment>
                 <ParameterName>FlatFilesInput</ParameterName>
                 <BindedVariableOrParameterName>$Project::FlatFilesInput</BindedVariableOrParameterName>
@@ -69,19 +69,19 @@
       <DTS:Variables />
       <DTS:Executables>
         <DTS:Executable
-          DTS:refId="Package\LOAD\Execute MasterLOAD"
+          DTS:refId="Package\LOAD\Execute Load to DWH"
           DTS:CreationName="Microsoft.ExecutePackageTask"
           DTS:Description="Execute Package Task"
           DTS:DTSID="{D35B4F5D-3248-46DC-BB47-22EEC55DFE89}"
           DTS:ExecutableType="Microsoft.ExecutePackageTask"
           DTS:LocaleID="-1"
-          DTS:ObjectName="Execute MasterLOAD"
+          DTS:ObjectName="Execute Load to DWH"
           DTS:TaskContact="Microsoft Corporation; Microsoft SQL Server; Microsoft Corporation; All Rights Reserved;http://www.microsoft.com/sql/support/default.asp;1">
           <DTS:Variables />
           <DTS:ObjectData>
             <ExecutePackageTask>
               <UseProjectReference>True</UseProjectReference>
-              <PackageName>MasterLOAD.dtsx</PackageName>
+              <PackageName>Load_to_DWH.dtsx</PackageName>
             </ExecutePackageTask>
           </DTS:ObjectData>
         </DTS:Executable>
@@ -111,8 +111,8 @@
       <GraphLayout
         Capacity="8" xmlns="clr-namespace:Microsoft.SqlServer.IntegrationServices.Designer.Model.Serialization;assembly=Microsoft.SqlServer.IntegrationServices.Graph" xmlns:mssgle="clr-namespace:Microsoft.SqlServer.Graph.LayoutEngine;assembly=Microsoft.SqlServer.Graph" xmlns:assembly="http://schemas.microsoft.com/winfx/2006/xaml">
         <NodeLayout
-          Size="187,42"
-          Id="Package\EXTRACT &amp; TRANSFORM\Execute Extract to STG"
+          Size="180,42"
+          Id="Package\EXTRACT &amp; TRANSFORM\Execute Extract to SA"
           TopLeft="14,27" />
         <ContainerLayout
           HeaderHeight="43"
@@ -122,8 +122,8 @@
           Id="Package\EXTRACT &amp; TRANSFORM"
           TopLeft="17,39" />
         <NodeLayout
-          Size="177,42"
-          Id="Package\LOAD\Execute MasterLOAD"
+          Size="182,42"
+          Id="Package\LOAD\Execute Load to DWH"
           TopLeft="17,23" />
         <ContainerLayout
           HeaderHeight="43"

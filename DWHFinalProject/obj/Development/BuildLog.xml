@@ -2,33 +2,33 @@
 <BuildLog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <ProjectInfo>
     <Name>DWHFinalProject</Name>
-    <LastWriteTime>2015-12-01T22:42:59.5656202Z</LastWriteTime>
+    <LastWriteTime>2015-12-03T00:36:22.2739239Z</LastWriteTime>
     <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
   </ProjectInfo>
   <LastBuildInfos>
     <ProjectBuildItemInfo>
-      <Name>DIMload.dtsx</Name>
-      <LastWriteTime>2015-12-01T20:59:54.9020604Z</LastWriteTime>
-      <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
-    </ProjectBuildItemInfo>
-    <ProjectBuildItemInfo>
       <Name>Master.dtsx</Name>
-      <LastWriteTime>2015-12-01T20:59:55.2202727Z</LastWriteTime>
+      <LastWriteTime>2015-12-02T20:05:16.7797583Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
-      <Name>ReLoad.dtsx</Name>
-      <LastWriteTime>2015-12-01T20:59:55.4464237Z</LastWriteTime>
+      <Name>INFOload.dtsx</Name>
+      <LastWriteTime>2015-12-03T01:40:16.4033115Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
-      <Name>MasterLOAD.dtsx</Name>
-      <LastWriteTime>2015-12-02T00:34:07.6132563Z</LastWriteTime>
+      <Name>INFOReLoad.dtsx</Name>
+      <LastWriteTime>2015-12-02T19:22:17.3450245Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
-      <Name>Extract_to_STG.dtsx</Name>
-      <LastWriteTime>2015-12-01T21:34:00.7845276Z</LastWriteTime>
+      <Name>Extract_to_SA.dtsx</Name>
+      <LastWriteTime>2015-12-03T01:25:56.9334941Z</LastWriteTime>
+      <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
+    </ProjectBuildItemInfo>
+    <ProjectBuildItemInfo>
+      <Name>Load_to_DWH.dtsx</Name>
+      <LastWriteTime>2015-12-03T01:40:16.3342811Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
   </LastBuildInfos>

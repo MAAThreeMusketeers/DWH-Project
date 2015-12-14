@@ -1,72 +1,98 @@
-USE DWH
-
 /*==============================================================*/
 /* DBMS name:      Microsoft SQL Server 2012                    */
-/* Created on:     24/11/2015 21:21:56                          */
+/* Created on:     02/12/2015 15:20:37                          */
 /*==============================================================*/
 
 
 if exists (select 1
    from sys.sysreferences r join sys.sysobjects o on (o.id = r.constid and o.type = 'F')
-   where r.fkeyid = object_id('FACTTABLE') and o.name = 'FK_FACTTABL_RELAGEGRO_DIMAGEGR')
-alter table FACTTABLE
-   drop constraint FK_FACTTABL_RELAGEGRO_DIMAGEGR
+   where r.fkeyid = object_id('FACTTABLELINEITEM') and o.name = 'FK_FACTTABL_RELATIONS_DIMAGEGR')
+alter table FACTTABLELINEITEM
+   drop constraint FK_FACTTABL_RELATIONS_DIMAGEGR
 go
 
 if exists (select 1
    from sys.sysreferences r join sys.sysobjects o on (o.id = r.constid and o.type = 'F')
-   where r.fkeyid = object_id('FACTTABLE') and o.name = 'FK_FACTTABL_RELCLIENT_DIMCLIEN')
-alter table FACTTABLE
+   where r.fkeyid = object_id('FACTTABLELINEITEM') and o.name = 'FK_FACTTABL_RELATIONS_DIMGENDE')
+alter table FACTTABLELINEITEM
+   drop constraint FK_FACTTABL_RELATIONS_DIMGENDE
+go
+
+if exists (select 1
+   from sys.sysreferences r join sys.sysobjects o on (o.id = r.constid and o.type = 'F')
+   where r.fkeyid = object_id('FACTTABLELINEITEM') and o.name = 'FK_FACTTABL_RELCLIENT_DIMCLIEN')
+alter table FACTTABLELINEITEM
    drop constraint FK_FACTTABL_RELCLIENT_DIMCLIEN
 go
 
 if exists (select 1
    from sys.sysreferences r join sys.sysobjects o on (o.id = r.constid and o.type = 'F')
-   where r.fkeyid = object_id('FACTTABLE') and o.name = 'FK_FACTTABL_RELDATE_DIMDATE')
-alter table FACTTABLE
-   drop constraint FK_FACTTABL_RELDATE_DIMDATE
+   where r.fkeyid = object_id('FACTTABLELINEITEM') and o.name = 'FK_FACTTABL_RELDATE1_DIMDATE')
+alter table FACTTABLELINEITEM
+   drop constraint FK_FACTTABL_RELDATE1_DIMDATE
 go
 
 if exists (select 1
    from sys.sysreferences r join sys.sysobjects o on (o.id = r.constid and o.type = 'F')
-   where r.fkeyid = object_id('FACTTABLE') and o.name = 'FK_FACTTABL_RELGENDER_DIMGENDE')
-alter table FACTTABLE
-   drop constraint FK_FACTTABL_RELGENDER_DIMGENDE
-go
-
-if exists (select 1
-   from sys.sysreferences r join sys.sysobjects o on (o.id = r.constid and o.type = 'F')
-   where r.fkeyid = object_id('FACTTABLE') and o.name = 'FK_FACTTABL_RELPAYMEN_DIMPAYME')
-alter table FACTTABLE
-   drop constraint FK_FACTTABL_RELPAYMEN_DIMPAYME
-go
-
-if exists (select 1
-   from sys.sysreferences r join sys.sysobjects o on (o.id = r.constid and o.type = 'F')
-   where r.fkeyid = object_id('FACTTABLE') and o.name = 'FK_FACTTABL_RELPRODUC_DIMPRODU')
-alter table FACTTABLE
+   where r.fkeyid = object_id('FACTTABLELINEITEM') and o.name = 'FK_FACTTABL_RELPRODUC_DIMPRODU')
+alter table FACTTABLELINEITEM
    drop constraint FK_FACTTABL_RELPRODUC_DIMPRODU
 go
 
 if exists (select 1
    from sys.sysreferences r join sys.sysobjects o on (o.id = r.constid and o.type = 'F')
-   where r.fkeyid = object_id('FACTTABLE') and o.name = 'FK_FACTTABL_RELRECEIP_DIMRECEI')
-alter table FACTTABLE
-   drop constraint FK_FACTTABL_RELRECEIP_DIMRECEI
-go
-
-if exists (select 1
-   from sys.sysreferences r join sys.sysobjects o on (o.id = r.constid and o.type = 'F')
-   where r.fkeyid = object_id('FACTTABLE') and o.name = 'FK_FACTTABL_RELSECTIO_DIMSECTI')
-alter table FACTTABLE
+   where r.fkeyid = object_id('FACTTABLELINEITEM') and o.name = 'FK_FACTTABL_RELSECTIO_DIMSECTI')
+alter table FACTTABLELINEITEM
    drop constraint FK_FACTTABL_RELSECTIO_DIMSECTI
 go
 
 if exists (select 1
    from sys.sysreferences r join sys.sysobjects o on (o.id = r.constid and o.type = 'F')
-   where r.fkeyid = object_id('FACTTABLE') and o.name = 'FK_FACTTABL_RELSTORE_DIMSTORE')
-alter table FACTTABLE
+   where r.fkeyid = object_id('FACTTABLELINEITEM') and o.name = 'FK_FACTTABL_RELSTORE_DIMSTORE')
+alter table FACTTABLELINEITEM
    drop constraint FK_FACTTABL_RELSTORE_DIMSTORE
+go
+
+if exists (select 1
+   from sys.sysreferences r join sys.sysobjects o on (o.id = r.constid and o.type = 'F')
+   where r.fkeyid = object_id('FACTTABLERECEIPT') and o.name = 'FK_FACTTABL_RELAGEGRO_DIMAGEGR')
+alter table FACTTABLERECEIPT
+   drop constraint FK_FACTTABL_RELAGEGRO_DIMAGEGR
+go
+
+if exists (select 1
+   from sys.sysreferences r join sys.sysobjects o on (o.id = r.constid and o.type = 'F')
+   where r.fkeyid = object_id('FACTTABLERECEIPT') and o.name = 'FK_FACTTABL_RELATIONS_DIMCLIEN')
+alter table FACTTABLERECEIPT
+   drop constraint FK_FACTTABL_RELATIONS_DIMCLIEN
+go
+
+if exists (select 1
+   from sys.sysreferences r join sys.sysobjects o on (o.id = r.constid and o.type = 'F')
+   where r.fkeyid = object_id('FACTTABLERECEIPT') and o.name = 'FK_FACTTABL_RELATIONS_DIMDATE')
+alter table FACTTABLERECEIPT
+   drop constraint FK_FACTTABL_RELATIONS_DIMDATE
+go
+
+if exists (select 1
+   from sys.sysreferences r join sys.sysobjects o on (o.id = r.constid and o.type = 'F')
+   where r.fkeyid = object_id('FACTTABLERECEIPT') and o.name = 'FK_FACTTABL_RELATIONS_DIMSTORE')
+alter table FACTTABLERECEIPT
+   drop constraint FK_FACTTABL_RELATIONS_DIMSTORE
+go
+
+if exists (select 1
+   from sys.sysreferences r join sys.sysobjects o on (o.id = r.constid and o.type = 'F')
+   where r.fkeyid = object_id('FACTTABLERECEIPT') and o.name = 'FK_FACTTABL_RELGENDER_DIMGENDE')
+alter table FACTTABLERECEIPT
+   drop constraint FK_FACTTABL_RELGENDER_DIMGENDE
+go
+
+if exists (select 1
+   from sys.sysreferences r join sys.sysobjects o on (o.id = r.constid and o.type = 'F')
+   where r.fkeyid = object_id('FACTTABLERECEIPT') and o.name = 'FK_FACTTABL_RELPAYMEN_DIMPAYME')
+alter table FACTTABLERECEIPT
+   drop constraint FK_FACTTABL_RELPAYMEN_DIMPAYME
 go
 
 if exists (select 1
@@ -113,13 +139,6 @@ go
 
 if exists (select 1
             from  sysobjects
-           where  id = object_id('DIMRECEIPT')
-            and   type = 'U')
-   drop table DIMRECEIPT
-go
-
-if exists (select 1
-            from  sysobjects
            where  id = object_id('DIMSECTION')
             and   type = 'U')
    drop table DIMSECTION
@@ -134,90 +153,133 @@ go
 
 if exists (select 1
             from  sysindexes
-           where  id    = object_id('FACTTABLE')
-            and   name  = 'RELRECEIPT_FK'
+           where  id    = object_id('FACTTABLELINEITEM')
+            and   name  = 'RELATIONSHIP_GENDER_FK'
             and   indid > 0
             and   indid < 255)
-   drop index FACTTABLE.RELRECEIPT_FK
+   drop index FACTTABLELINEITEM.RELATIONSHIP_GENDER_FK
 go
 
 if exists (select 1
             from  sysindexes
-           where  id    = object_id('FACTTABLE')
-            and   name  = 'RELPRODUCT_FK'
+           where  id    = object_id('FACTTABLELINEITEM')
+            and   name  = 'RELATIONSHIP_AGEGROUP_FK'
             and   indid > 0
             and   indid < 255)
-   drop index FACTTABLE.RELPRODUCT_FK
+   drop index FACTTABLELINEITEM.RELATIONSHIP_AGEGROUP_FK
 go
 
 if exists (select 1
             from  sysindexes
-           where  id    = object_id('FACTTABLE')
-            and   name  = 'RELSECTION_FK'
-            and   indid > 0
-            and   indid < 255)
-   drop index FACTTABLE.RELSECTION_FK
-go
-
-if exists (select 1
-            from  sysindexes
-           where  id    = object_id('FACTTABLE')
-            and   name  = 'RELDATE_FK'
-            and   indid > 0
-            and   indid < 255)
-   drop index FACTTABLE.RELDATE_FK
-go
-
-if exists (select 1
-            from  sysindexes
-           where  id    = object_id('FACTTABLE')
-            and   name  = 'RELSTORE_FK'
-            and   indid > 0
-            and   indid < 255)
-   drop index FACTTABLE.RELSTORE_FK
-go
-
-if exists (select 1
-            from  sysindexes
-           where  id    = object_id('FACTTABLE')
+           where  id    = object_id('FACTTABLELINEITEM')
             and   name  = 'RELCLIENT_FK'
             and   indid > 0
             and   indid < 255)
-   drop index FACTTABLE.RELCLIENT_FK
+   drop index FACTTABLELINEITEM.RELCLIENT_FK
 go
 
 if exists (select 1
             from  sysindexes
-           where  id    = object_id('FACTTABLE')
-            and   name  = 'RELAGEGROUP_FK'
+           where  id    = object_id('FACTTABLELINEITEM')
+            and   name  = 'RELDATE1_FK'
             and   indid > 0
             and   indid < 255)
-   drop index FACTTABLE.RELAGEGROUP_FK
+   drop index FACTTABLELINEITEM.RELDATE1_FK
 go
 
 if exists (select 1
             from  sysindexes
-           where  id    = object_id('FACTTABLE')
-            and   name  = 'RELGENDER_FK'
+           where  id    = object_id('FACTTABLELINEITEM')
+            and   name  = 'RELPRODUCT_FK'
             and   indid > 0
             and   indid < 255)
-   drop index FACTTABLE.RELGENDER_FK
+   drop index FACTTABLELINEITEM.RELPRODUCT_FK
 go
 
 if exists (select 1
             from  sysindexes
-           where  id    = object_id('FACTTABLE')
-            and   name  = 'RELPAYMENT_FK'
+           where  id    = object_id('FACTTABLELINEITEM')
+            and   name  = 'RELSECTION_FK'
             and   indid > 0
             and   indid < 255)
-   drop index FACTTABLE.RELPAYMENT_FK
+   drop index FACTTABLELINEITEM.RELSECTION_FK
+go
+
+if exists (select 1
+            from  sysindexes
+           where  id    = object_id('FACTTABLELINEITEM')
+            and   name  = 'RELSTORE_FK'
+            and   indid > 0
+            and   indid < 255)
+   drop index FACTTABLELINEITEM.RELSTORE_FK
 go
 
 if exists (select 1
             from  sysobjects
-           where  id = object_id('FACTTABLE')
+           where  id = object_id('FACTTABLELINEITEM')
             and   type = 'U')
-   drop table FACTTABLE
+   drop table FACTTABLELINEITEM
+go
+
+if exists (select 1
+            from  sysindexes
+           where  id    = object_id('FACTTABLERECEIPT')
+            and   name  = 'RELATIONSHIP_11_FK'
+            and   indid > 0
+            and   indid < 255)
+   drop index FACTTABLERECEIPT.RELATIONSHIP_11_FK
+go
+
+if exists (select 1
+            from  sysindexes
+           where  id    = object_id('FACTTABLERECEIPT')
+            and   name  = 'RELATIONSHIP_STORE_FK'
+            and   indid > 0
+            and   indid < 255)
+   drop index FACTTABLERECEIPT.RELATIONSHIP_STORE_FK
+go
+
+if exists (select 1
+            from  sysindexes
+           where  id    = object_id('FACTTABLERECEIPT')
+            and   name  = 'RELATIONSHIP_DATE_FK'
+            and   indid > 0
+            and   indid < 255)
+   drop index FACTTABLERECEIPT.RELATIONSHIP_DATE_FK
+go
+
+if exists (select 1
+            from  sysindexes
+           where  id    = object_id('FACTTABLERECEIPT')
+            and   name  = 'RELAGEGROUP_FK'
+            and   indid > 0
+            and   indid < 255)
+   drop index FACTTABLERECEIPT.RELAGEGROUP_FK
+go
+
+if exists (select 1
+            from  sysindexes
+           where  id    = object_id('FACTTABLERECEIPT')
+            and   name  = 'RELGENDER_FK'
+            and   indid > 0
+            and   indid < 255)
+   drop index FACTTABLERECEIPT.RELGENDER_FK
+go
+
+if exists (select 1
+            from  sysindexes
+           where  id    = object_id('FACTTABLERECEIPT')
+            and   name  = 'RELPAYMENT_FK'
+            and   indid > 0
+            and   indid < 255)
+   drop index FACTTABLERECEIPT.RELPAYMENT_FK
+go
+
+if exists (select 1
+            from  sysobjects
+           where  id = object_id('FACTTABLERECEIPT')
+            and   type = 'U')
+   drop table FACTTABLERECEIPT
 go
 
 /*==============================================================*/
@@ -237,7 +299,7 @@ create table DIMCLIENT (
    CLIENTKEY            numeric              identity,
    CLIENTID             int                  not null,
    GENDER               char(1)              null,
-   DATEOFBIRTH          date		         null,
+   DATEOFBIRTH          date				 null,
    AGEGROUP             nvarchar(50)         null,
    constraint PK_DIMCLIENT primary key (CLIENTKEY)
 )
@@ -247,24 +309,24 @@ go
 /* Table: DIMDATE                                               */
 /*==============================================================*/
 create table DIMDATE (
-   DATEKEY              int					 not null,
+   DATEKEY              numeric              identity,
    DATE                 date             not null,
-   CalendarYear                 int              null,
-   CalendarQuarter                int           null,
-   CalendarMonthOfYear            int           null,
-   CalendarWeekOfYear            int           null,
-   CalendarDayOfYear           int           null,
-   CalendarWeekOfMonth              int           null,
-   CalendarDayOfMonth               int              null,
-   CalendarMonthName         varchar(9)              null,
-   CalendarDayName      varchar(9)              null,
-   CalendarMonthYear        varchar(13)           null,
-   IsWeekend  bit           null,
-   IsWorkDay         bit           null,
-   IsHoliday   bit           null,
-   IsPromotion            bit                  null,
-   IsLeapYear            bit                  null,
-   SellingSeason           nvarchar(50)                  null,
+   CALENDARYEAR         char(4)              null,
+   CALENDARQUARTER      int                  null,
+   CALENDARMONTHOFYEAR  int                  null,
+   CALENDARWEEKOFYEAR   int                  null,
+   CALENDARDAYOFYEAR    int                  null,
+   CALENDARWEEKOFMONTH  int                  null,
+   CALENDARDAYOFMONTH   int                  null,
+   CALENDARMONTHNAME    varchar(9)           null,
+   CALENDARDAYNAME      varchar(9)           null,
+   CALENDARMONTHYEAR    varchar(13)          null,
+   ISWEEKEND            bit                  null,
+   ISWORKDAY            bit                  null,
+   ISHOLIDAY            bit                  null,
+   ISPROMOTION          bit                  null,
+   ISLEAPYEAR           bit                  null,
+   SELLINGSEASON        nvarchar(50)         null,
    constraint PK_DIMDATE primary key (DATEKEY)
 )
 go
@@ -285,11 +347,10 @@ go
 create table DIMPAYMENT (
    PAYMENTTYPEKEY       numeric              identity,
    PAYMENTTYPEID        smallint             not null,
-   RECEIPTID			int				     not null,
-   NOOFDIFFERENTPAYMENTS int				 not null,
-   MAINPAYMENTTYPEID	smallint			 not null,
+   RECEIPTID            int                  not null,
+   NOOFDIFFERENTPAYMENTS int                  not null,
+   MAINPAYMENTTYPEID    smallint             not null,
    PAYMENTTYPEDESCRIPTION nvarchar(50)         null,
-
    constraint PK_DIMPAYMENT primary key (PAYMENTTYPEKEY)
 )
 go
@@ -312,16 +373,6 @@ create table DIMPRODUCT (
    PRODUCTCLASS         char(1)              null,
    PRODUCTSUBCLASS      char(1)              null,
    constraint PK_DIMPRODUCT primary key (PRODUCTKEY)
-)
-go
-
-/*==============================================================*/
-/* Table: DIMRECEIPT                                            */
-/*==============================================================*/
-create table DIMRECEIPT (
-   RECEIPTKEY           numeric              identity,
-   RECEIPTID            int                  not null,
-   constraint PK_DIMRECEIPT primary key (RECEIPTKEY)
 )
 go
 
@@ -353,28 +404,116 @@ create table DIMSTORE (
 go
 
 /*==============================================================*/
-/* Table: FACTTABLE                                             */
+/* Table: FACTTABLELINEITEM                                     */
 /*==============================================================*/
-create table FACTTABLE (
+create table FACTTABLELINEITEM (
    LINEITEMKEY          numeric              identity,
-   STOREKEY             numeric              not null,
    GENDERKEY            numeric              null,
-   PAYMENTTYPEKEY       numeric              not null,
-   RECEIPTKEY           numeric              not null,
-   AGEGROUPKEY          numeric              null,
-   DATEKEY              int              not null,
+   STOREKEY             numeric              not null,
+   DATEKEY              numeric              null,
    SECTIONKEY           numeric              not null,
    PRODUCTKEY           numeric              not null,
-   CLIENTKEY            numeric              not null,
-   ORIGINKEY            varchar(30)/*whats this?*/          not null,
-/*   TRANSACTIONBEGHOUR   datetime             null,
-   TRANSACTIONENDHOUR   datetime             null,
-   TRANSACTIONDURATION  varchar(8)  + change this one to int, and we will measure in minutes         null,*/
+   AGEGROUPKEY          numeric              null,
+   CLIENTKEY            numeric              null,
+   RECEIPTID            int                  null,
    DISCOUNTVALUE        int                  null,
-   /*TOTALPAYED           int                  null,*/
    QUANTITY             int                  null,
-   TOTALVALUE           smallint             null,
-   constraint PK_FACTTABLE primary key (LINEITEMKEY)
+   TOTALVALUE           int             null,
+   constraint PK_FACTTABLELINEITEM primary key (LINEITEMKEY)
+)
+go
+
+/*==============================================================*/
+/* Index: RELSTORE_FK                                           */
+/*==============================================================*/
+
+
+
+
+create nonclustered index RELSTORE_FK on FACTTABLELINEITEM (STOREKEY ASC)
+go
+
+/*==============================================================*/
+/* Index: RELSECTION_FK                                         */
+/*==============================================================*/
+
+
+
+
+create nonclustered index RELSECTION_FK on FACTTABLELINEITEM (SECTIONKEY ASC)
+go
+
+/*==============================================================*/
+/* Index: RELPRODUCT_FK                                         */
+/*==============================================================*/
+
+
+
+
+create nonclustered index RELPRODUCT_FK on FACTTABLELINEITEM (PRODUCTKEY ASC)
+go
+
+/*==============================================================*/
+/* Index: RELDATE1_FK                                           */
+/*==============================================================*/
+
+
+
+
+create nonclustered index RELDATE1_FK on FACTTABLELINEITEM (DATEKEY ASC)
+go
+
+/*==============================================================*/
+/* Index: RELCLIENT_FK                                          */
+/*==============================================================*/
+
+
+
+
+create nonclustered index RELCLIENT_FK on FACTTABLELINEITEM (CLIENTKEY ASC)
+go
+
+/*==============================================================*/
+/* Index: RELATIONSHIP_AGEGROUP_FK                              */
+/*==============================================================*/
+
+
+
+
+create nonclustered index RELATIONSHIP_AGEGROUP_FK on FACTTABLELINEITEM (AGEGROUPKEY ASC)
+go
+
+/*==============================================================*/
+/* Index: RELATIONSHIP_GENDER_FK                                */
+/*==============================================================*/
+
+
+
+
+create nonclustered index RELATIONSHIP_GENDER_FK on FACTTABLELINEITEM (GENDERKEY ASC)
+go
+
+/*==============================================================*/
+/* Table: FACTTABLERECEIPT                                      */
+/*==============================================================*/
+create table FACTTABLERECEIPT (
+   RECEIPTKEY	        numeric              identity,
+   CLIENTKEY            numeric              null,
+   GENDERKEY            numeric              null,
+   PAYMENTTYPEKEY       numeric              not null,
+   AGEGROUPKEY          numeric              null,
+   DATEKEY              numeric              not null,
+   STOREKEY             numeric              null,
+   RECEIPTID            int                  not null,
+   TOTALVALUE           int					 null,
+   DISCOUNTVALUE        int                  null,
+   TRANSACTIONBEGHOUR   time                 null,
+   TRANSACTIONENDHOUR   time                 null,
+   TRANSACTIONDURATION  int                  null,
+   NUMBEROFITEMS        int                  null,
+   NUMBEROFPRODUCTS     int                  null,
+  
+   constraint PK_FACTTABLERECEIPT primary key (RECEIPTKEY)
 )
 go
 
@@ -385,7 +524,7 @@ go
 
 
 
-create nonclustered index RELPAYMENT_FK on FACTTABLE (PAYMENTTYPEKEY ASC)
+create nonclustered index RELPAYMENT_FK on FACTTABLERECEIPT (PAYMENTTYPEKEY ASC)
 go
 
 /*==============================================================*/
@@ -395,7 +534,7 @@ go
 
 
 
-create nonclustered index RELGENDER_FK on FACTTABLE (GENDERKEY ASC)
+create nonclustered index RELGENDER_FK on FACTTABLERECEIPT (GENDERKEY ASC)
 go
 
 /*==============================================================*/
@@ -405,111 +544,101 @@ go
 
 
 
-create nonclustered index RELAGEGROUP_FK on FACTTABLE (AGEGROUPKEY ASC)
+create nonclustered index RELAGEGROUP_FK on FACTTABLERECEIPT (AGEGROUPKEY ASC)
 go
 
 /*==============================================================*/
-/* Index: RELCLIENT_FK                                          */
+/* Index: RELATIONSHIP_DATE_FK                                  */
 /*==============================================================*/
 
 
 
 
-create nonclustered index RELCLIENT_FK on FACTTABLE (CLIENTKEY ASC)
+create nonclustered index RELATIONSHIP_DATE_FK on FACTTABLERECEIPT (DATEKEY ASC)
 go
 
 /*==============================================================*/
-/* Index: RELSTORE_FK                                           */
+/* Index: RELATIONSHIP_STORE_FK                                 */
 /*==============================================================*/
 
 
 
 
-create nonclustered index RELSTORE_FK on FACTTABLE (STOREKEY ASC)
+create nonclustered index RELATIONSHIP_STORE_FK on FACTTABLERECEIPT (STOREKEY ASC)
 go
 
 /*==============================================================*/
-/* Index: RELDATE_FK                                            */
+/* Index: RELATIONSHIP_11_FK                                    */
 /*==============================================================*/
 
 
 
 
-create nonclustered index RELDATE_FK on FACTTABLE (DATEKEY ASC)
+create nonclustered index RELATIONSHIP_11_FK on FACTTABLERECEIPT (CLIENTKEY ASC)
 go
 
-/*==============================================================*/
-/* Index: RELSECTION_FK                                         */
-/*==============================================================*/
-
-
-
-
-create nonclustered index RELSECTION_FK on FACTTABLE (SECTIONKEY ASC)
-go
-
-/*==============================================================*/
-/* Index: RELPRODUCT_FK                                         */
-/*==============================================================*/
-
-
-
-
-create nonclustered index RELPRODUCT_FK on FACTTABLE (PRODUCTKEY ASC)
-go
-
-/*==============================================================*/
-/* Index: RELRECEIPT_FK                                         */
-/*==============================================================*/
-
-
-
-
-create nonclustered index RELRECEIPT_FK on FACTTABLE (RECEIPTKEY ASC)
-go
-
-alter table FACTTABLE
-   add constraint FK_FACTTABL_RELAGEGRO_DIMAGEGR foreign key (AGEGROUPKEY)
+alter table FACTTABLELINEITEM
+   add constraint FK_FACTTABL_RELATIONS_DIMAGEGR foreign key (AGEGROUPKEY)
       references DIMAGEGROUP (AGEGROUPKEY)
 go
 
-alter table FACTTABLE
+alter table FACTTABLELINEITEM
+   add constraint FK_FACTTABL_RELATIONS_DIMGENDE foreign key (GENDERKEY)
+      references DIMGENDER (GENDERKEY)
+go
+
+alter table FACTTABLELINEITEM
    add constraint FK_FACTTABL_RELCLIENT_DIMCLIEN foreign key (CLIENTKEY)
       references DIMCLIENT (CLIENTKEY)
 go
 
-alter table FACTTABLE
-   add constraint FK_FACTTABL_RELDATE_DIMDATE foreign key (DATEKEY)
+alter table FACTTABLELINEITEM
+   add constraint FK_FACTTABL_RELDATE1_DIMDATE foreign key (DATEKEY)
       references DIMDATE (DATEKEY)
 go
 
-alter table FACTTABLE
-   add constraint FK_FACTTABL_RELGENDER_DIMGENDE foreign key (GENDERKEY)
-      references DIMGENDER (GENDERKEY)
-go
-
-alter table FACTTABLE
-   add constraint FK_FACTTABL_RELPAYMEN_DIMPAYME foreign key (PAYMENTTYPEKEY)
-      references DIMPAYMENT (PAYMENTTYPEKEY)
-go
-
-alter table FACTTABLE
+alter table FACTTABLELINEITEM
    add constraint FK_FACTTABL_RELPRODUC_DIMPRODU foreign key (PRODUCTKEY)
       references DIMPRODUCT (PRODUCTKEY)
 go
 
-alter table FACTTABLE
-   add constraint FK_FACTTABL_RELRECEIP_DIMRECEI foreign key (RECEIPTKEY)
-      references DIMRECEIPT (RECEIPTKEY)
-go
-
-alter table FACTTABLE
+alter table FACTTABLELINEITEM
    add constraint FK_FACTTABL_RELSECTIO_DIMSECTI foreign key (SECTIONKEY)
       references DIMSECTION (SECTIONKEY)
 go
 
-alter table FACTTABLE
+alter table FACTTABLELINEITEM
    add constraint FK_FACTTABL_RELSTORE_DIMSTORE foreign key (STOREKEY)
       references DIMSTORE (STOREKEY)
+go
+
+alter table FACTTABLERECEIPT
+   add constraint FK_FACTTABL_RELAGEGRO_DIMAGEGR foreign key (AGEGROUPKEY)
+      references DIMAGEGROUP (AGEGROUPKEY)
+go
+
+alter table FACTTABLERECEIPT
+   add constraint FK_FACTTABL_RELATIONS_DIMCLIEN foreign key (CLIENTKEY)
+      references DIMCLIENT (CLIENTKEY)
+go
+
+alter table FACTTABLERECEIPT
+   add constraint FK_FACTTABL_RELATIONS_DIMDATE foreign key (DATEKEY)
+      references DIMDATE (DATEKEY)
+go
+
+alter table FACTTABLERECEIPT
+   add constraint FK_FACTTABL_RELATIONS_DIMSTORE foreign key (STOREKEY)
+      references DIMSTORE (STOREKEY)
+go
+
+alter table FACTTABLERECEIPT
+   add constraint FK_FACTTABL_RELGENDER_DIMGENDE foreign key (GENDERKEY)
+      references DIMGENDER (GENDERKEY)
+go
+
+alter table FACTTABLERECEIPT
+   add constraint FK_FACTTABL_RELPAYMEN_DIMPAYME foreign key (PAYMENTTYPEKEY)
+      references DIMPAYMENT (PAYMENTTYPEKEY)
 go
 

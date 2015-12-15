@@ -2,33 +2,33 @@
 <BuildLog xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
   <ProjectInfo>
     <Name>DWHFinalProject</Name>
-    <LastWriteTime>2015-12-03T00:36:22.2739239Z</LastWriteTime>
+    <LastWriteTime>2015-12-15T19:43:53.0635118Z</LastWriteTime>
     <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
   </ProjectInfo>
   <LastBuildInfos>
     <ProjectBuildItemInfo>
       <Name>Master.dtsx</Name>
-      <LastWriteTime>2015-12-02T20:05:16.7797583Z</LastWriteTime>
+      <LastWriteTime>2015-12-02T20:05:18Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>INFOload.dtsx</Name>
-      <LastWriteTime>2015-12-03T01:40:16.4033115Z</LastWriteTime>
+      <LastWriteTime>2015-12-15T09:16:15.3464543Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>INFOReLoad.dtsx</Name>
-      <LastWriteTime>2015-12-02T19:22:17.3450245Z</LastWriteTime>
+      <LastWriteTime>2015-12-15T01:00:03.8485461Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>Extract_to_SA.dtsx</Name>
-      <LastWriteTime>2015-12-03T01:25:56.9334941Z</LastWriteTime>
+      <LastWriteTime>2015-12-15T09:10:24.921381Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
     <ProjectBuildItemInfo>
       <Name>Load_to_DWH.dtsx</Name>
-      <LastWriteTime>2015-12-03T01:40:16.3342811Z</LastWriteTime>
+      <LastWriteTime>2015-12-15T21:10:57.0414452Z</LastWriteTime>
       <LastKnownProtectionLevel>EncryptSensitiveWithUserKey</LastKnownProtectionLevel>
     </ProjectBuildItemInfo>
   </LastBuildInfos>

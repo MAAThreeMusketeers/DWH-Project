@@ -1,0 +1,347 @@
+use DWH
+
+-- delete from [dbo].[DIMDATE]
+
+declare @StartDate as datetime, @EndDate as datetime
+SET @StartDate = '01/01/1970'
+SET @EndDate = '12/31/2020'
+
+WHILE @StartDate<@EndDate
+Begin
+INSERT INTO DimDate(
+	DATEKEY,
+	CALENDARDAYMONTH,
+	[MONTH],
+	CALENDARYEAR,
+	CALENDARMONTH,
+	CALENDARYEARMONTH,
+	[DAYOFWEEK],
+	[WEEK],
+	CALENDARWEEK,
+	CALENDARDAYOFYEAR,
+	DESCRIPTIONMONTH,
+	[QUARTER],
+	SELLINGSEASON
+)
+
+select
+	cast(convert(varchar(8),@StartDate,112) as int)		AS DATEKEY,
+	day(@StartDate)										AS CALENDARDAYMONTH,
+	Month(@StartDate)									AS [MONTH],
+	Year(@StartDate)									AS CALENDARYEAR,
+	Month(@StartDate)									AS CALENDARMONTH,
+	Year(@StartDate)*100+Month(@StartDate)				AS CALENDARYEARMONTH,
+	datename(weekday,@StartDate)						AS [DAYOFWEEK],
+	datename(week,@StartDate)							AS [WEEK],
+	Year(@StartDate)*100+datename(week,@StartDate)		AS CALENDARWEEK,
+	datename(dayOfYear,@StartDate)						AS CALENDARDAYOFYEAR,
+	datename(month,@StartDate)							AS DESCRIPTIONMONTH,
+	datename(quarter,@StartDate)						AS [QUARTER]
+
+
+
+set @StartDate = @StartDate +1
+end
+
+UPDATE DimDate SET  --set "moving" holidays before the "static" ones
+DESCRIPTIONHOLIDAY=
+	CASE DATEKEY
+		WHEN 19950228 THEN 'Carnival'
+		WHEN 19950414 THEN 'Good Friday'
+		WHEN 19950416 THEN 'Easter'
+		WHEN 19960220 THEN 'Carnival'
+		WHEN 19960405 THEN 'Good Friday'
+		WHEN 19960407 THEN 'Easter'
+		WHEN 19970211 THEN 'Carnival'
+		WHEN 19970328 THEN 'Good Friday'
+		WHEN 19970330 THEN 'Easter'
+		WHEN 19980224 THEN 'Carnival'
+		WHEN 19980410 THEN 'Good Friday'
+		WHEN 19980412 THEN 'Easter'
+		WHEN 19990216 THEN 'Carnival'
+		WHEN 19990402 THEN 'Good Friday'
+		WHEN 19990404 THEN 'Easter'
+		WHEN 20000307 THEN 'Carnival'
+		WHEN 20000421 THEN 'Good Friday'
+		WHEN 20000423 THEN 'Easter'
+		WHEN 20010227 THEN 'Carnival'
+		WHEN 20010413 THEN 'Good Friday'
+		WHEN 20010415 THEN 'Easter'
+		WHEN 20020212 THEN 'Carnival'
+		WHEN 20020329 THEN 'Good Friday'
+		WHEN 20020331 THEN 'Easter'
+		WHEN 20030304 THEN 'Carnival'
+		WHEN 20030418 THEN 'Good Friday'
+		WHEN 20030420 THEN 'Easter'
+		WHEN 20040224 THEN 'Carnival'
+		WHEN 20040409 THEN 'Good Friday'
+		WHEN 20040411 THEN 'Easter'
+		WHEN 20050208 THEN 'Carnival'
+		WHEN 20050325 THEN 'Good Friday'
+		WHEN 20050327 THEN 'Easter'
+		WHEN 20060228 THEN 'Carnival'
+		WHEN 20060414 THEN 'Good Friday'
+		WHEN 20060416 THEN 'Easter'
+		WHEN 20070220 THEN 'Carnival'
+		WHEN 20070406 THEN 'Good Friday'
+		WHEN 20070408 THEN 'Easter'
+		WHEN 20080205 THEN 'Carnival'
+		WHEN 20080321 THEN 'Good Friday'
+		WHEN 20080323 THEN 'Easter'
+		WHEN 20090224 THEN 'Carnival'
+		WHEN 20090410 THEN 'Good Friday'
+		WHEN 20090412 THEN 'Easter'
+		WHEN 20100216 THEN 'Carnival'
+		WHEN 20100402 THEN 'Good Friday'
+		WHEN 20100404 THEN 'Easter'
+		WHEN 20110308 THEN 'Carnival'
+		WHEN 20110422 THEN 'Good Friday'
+		WHEN 20110424 THEN 'Easter'
+		WHEN 20120221 THEN 'Carnival'
+		WHEN 20120406 THEN 'Good Friday'
+		WHEN 20120408 THEN 'Easter'
+		WHEN 20130212 THEN 'Carnival'
+		WHEN 20130329 THEN 'Good Friday'
+		WHEN 20130331 THEN 'Easter'
+		WHEN 20140304 THEN 'Carnival'
+		WHEN 20140418 THEN 'Good Friday'
+		WHEN 20140420 THEN 'Easter'
+		WHEN 20150217 THEN 'Carnival'
+		WHEN 20150403 THEN 'Good Friday'
+		WHEN 20150405 THEN 'Easter'
+		WHEN 20160209 THEN 'Carnival'
+		WHEN 20160325 THEN 'Good Friday'
+		WHEN 20160327 THEN 'Easter'
+		WHEN 20170228 THEN 'Carnival'
+		WHEN 20170414 THEN 'Good Friday'
+		WHEN 20170416 THEN 'Easter'
+		WHEN 20180213 THEN 'Carnival'
+		WHEN 20180330 THEN 'Good Friday'
+		WHEN 20180401 THEN 'Easter'
+		WHEN 20190305 THEN 'Carnival'
+		WHEN 20190419 THEN 'Good Friday'
+		WHEN 20190421 THEN 'Easter'
+		WHEN 20200225 THEN 'Carnival'
+		WHEN 20200410 THEN 'Good Friday'
+		WHEN 20200412 THEN 'Easter'
+		ELSE DESCRIPTIONHOLIDAY 
+	END
+  
+UPDATE DimDate SET  --set "moving" holidays before the "static" ones
+ISHOLIDAY=
+	CASE DATEKEY
+		WHEN 19950228 THEN 1
+		WHEN 19950414 THEN 1
+		WHEN 19950416 THEN 1
+		WHEN 19960220 THEN 1
+		WHEN 19960405 THEN 1
+		WHEN 19960407 THEN 1
+		WHEN 19970211 THEN 1
+		WHEN 19970328 THEN 1
+		WHEN 19970330 THEN 1
+		WHEN 19980224 THEN 1
+		WHEN 19980410 THEN 1
+		WHEN 19980412 THEN 1
+		WHEN 19990216 THEN 1
+		WHEN 19990402 THEN 1
+		WHEN 19990404 THEN 1
+		WHEN 20000307 THEN 1
+		WHEN 20000421 THEN 1
+		WHEN 20000423 THEN 1
+		WHEN 20010227 THEN 1
+		WHEN 20010413 THEN 1
+		WHEN 20010415 THEN 1
+		WHEN 20020212 THEN 1
+		WHEN 20020329 THEN 1
+		WHEN 20020331 THEN 1
+		WHEN 20030304 THEN 1
+		WHEN 20030418 THEN 1
+		WHEN 20030420 THEN 1
+		WHEN 20040224 THEN 1
+		WHEN 20040409 THEN 1
+		WHEN 20040411 THEN 1
+		WHEN 20050208 THEN 1
+		WHEN 20050325 THEN 1
+		WHEN 20050327 THEN 1
+		WHEN 20060228 THEN 1
+		WHEN 20060414 THEN 1
+		WHEN 20060416 THEN 1
+		WHEN 20070220 THEN 1
+		WHEN 20070406 THEN 1
+		WHEN 20070408 THEN 1
+		WHEN 20080205 THEN 1
+		WHEN 20080321 THEN 1
+		WHEN 20080323 THEN 1
+		WHEN 20090224 THEN 1
+		WHEN 20090410 THEN 1
+		WHEN 20090412 THEN 1
+		WHEN 20100216 THEN 1
+		WHEN 20100402 THEN 1
+		WHEN 20100404 THEN 1
+		WHEN 20110308 THEN 1
+		WHEN 20110422 THEN 1
+		WHEN 20110424 THEN 1
+		WHEN 20120221 THEN 1
+		WHEN 20120406 THEN 1
+		WHEN 20120408 THEN 1
+		WHEN 20130212 THEN 1
+		WHEN 20130329 THEN 1
+		WHEN 20130331 THEN 1
+		WHEN 20140304 THEN 1
+		WHEN 20140418 THEN 1
+		WHEN 20140420 THEN 1
+		WHEN 20150217 THEN 1
+		WHEN 20150403 THEN 1
+		WHEN 20150405 THEN 1
+		WHEN 20160209 THEN 1
+		WHEN 20160325 THEN 1
+		WHEN 20160327 THEN 1
+		WHEN 20170228 THEN 1
+		WHEN 20170414 THEN 1
+		WHEN 20170416 THEN 1
+		WHEN 20180213 THEN 1
+		WHEN 20180330 THEN 1
+		WHEN 20180401 THEN 1
+		WHEN 20190305 THEN 1
+		WHEN 20190419 THEN 1
+		WHEN 20190421 THEN 1
+		WHEN 20200225 THEN 1
+		WHEN 20200410 THEN 1
+		WHEN 20200412 THEN 1
+		ELSE ISHOLIDAY 
+	END
+UPDATE DimDate SET
+[MONTH] =
+	Case [MONTH] 
+		when 1 then 'January'
+		when 2 then 'February'
+		when 3 then 'March'
+		when 4 then 'April'
+		when 5 then 'May'
+		when 6 then 'June'
+		when 7 then 'July'
+		when 8 then 'August'
+		when 9 then 'September'
+		when 10 then 'October'
+		when 11 then 'November'
+		when 12 then 'December'
+		else DESCRIPTIONMONTH
+	END,
+CALENDARQUARTER =
+	Case [QUARTER] 
+		WHEN '1' then left(DATEKEY,4)+'Q1'
+		WHEN '2' then left(DATEKEY,4)+'Q2'
+		WHEN '3' then left(DATEKEY,4)+'Q3'
+		WHEN '4' then left(DATEKEY,4)+'Q4'
+		else CALENDARQUARTER
+	END,
+DESCRIPTIONQUARTER =
+	Case [QUARTER] 
+		WHEN '1' then left(DATEKEY,4)+' / 1ºQuarter'
+		WHEN '2' then left(DATEKEY,4)+' / 2ºQuarter'
+		WHEN '3' then left(DATEKEY,4)+' / 3ºQuarter'
+		WHEN '4' then left(DATEKEY,4)+' / 4ºQuarter'
+		else CALENDARQUARTER
+	END,
+CALENDARSEMESTER =
+	CASE [MONTH]
+		WHEN 1  then CONVERT(varchar(20),left(DATEKEY,4))+'S1'
+		WHEN 2  then CONVERT(varchar(20),left(DATEKEY,4))+'S1'
+		WHEN 3  then CONVERT(varchar(20),left(DATEKEY,4))+'S1'
+		WHEN 4  then CONVERT(varchar(20),left(DATEKEY,4))+'S1'
+		WHEN 5  then CONVERT(varchar(20),left(DATEKEY,4))+'S1'
+		WHEN 6  then CONVERT(varchar(20),left(DATEKEY,4))+'S1'
+		WHEN 7  then CONVERT(varchar(20),left(DATEKEY,4))+'S2'
+		WHEN 8  then CONVERT(varchar(20),left(DATEKEY,4))+'S2'
+		WHEN 9  then CONVERT(varchar(20),left(DATEKEY,4))+'S2'
+		WHEN 10 then CONVERT(varchar(20),left(DATEKEY,4))+'S2'
+		WHEN 11 then CONVERT(varchar(20),left(DATEKEY,4))+'S2'
+		WHEN 12 then CONVERT(varchar(20),left(DATEKEY,4))+'S2'
+	ELSE CONVERT(varchar(20),[MONTH]) 
+	END,
+DESCRIPTIONSEMESTER =
+	CASE [MONTH]
+		WHEN 1  then CONVERT(varchar(20),left(DATEKEY,4))+' / 1ºSem'
+		WHEN 2  then CONVERT(varchar(20),left(DATEKEY,4))+' / 1ºSem'
+		WHEN 3  then CONVERT(varchar(20),left(DATEKEY,4))+' / 1ºSem'
+		WHEN 4  then CONVERT(varchar(20),left(DATEKEY,4))+' / 1ºSem'
+		WHEN 5  then CONVERT(varchar(20),left(DATEKEY,4))+' / 1ºSem'
+		WHEN 6  then CONVERT(varchar(20),left(DATEKEY,4))+' / 1ºSem'
+		WHEN 7  then CONVERT(varchar(20),left(DATEKEY,4))+' / 2ºSem'
+		WHEN 8  then CONVERT(varchar(20),left(DATEKEY,4))+' / 2ºSem'
+		WHEN 9  then CONVERT(varchar(20),left(DATEKEY,4))+' / 2ºSem'
+		WHEN 10 then CONVERT(varchar(20),left(DATEKEY,4))+' / 2ºSem'
+		WHEN 11 then CONVERT(varchar(20),left(DATEKEY,4))+' / 2ºSem'
+		WHEN 12 then CONVERT(varchar(20),left(DATEKEY,4))+' / 2ºSem'
+		ELSE CONVERT(varchar(20),[MONTH])
+	END,
+
+
+[DATE]=CAST(CONVERT(varchar(20),DATEKEY,1) as datetime),
+DESCRIPTIONDAY=CONVERT(varchar(20), [DATE], 111)  
+
+
+UPDATE DimDate SET
+DESCRIPTIONDAY=CONVERT(varchar(20), [DATE], 111),
+ISWEEKEND = 
+CASE [DAYOFWEEK]
+	WHEN 'Saturday' THEN 1
+	WHEN 'Sunday' THEN 1
+	ELSE ISWEEKEND
+END
+
+
+UPDATE DimDate SET
+ISHOLIDAY=
+CASE right(DATEKEY,4)
+	WHEN 0101 THEN 1
+	WHEN 0425 THEN 1
+	WHEN 0501 THEN 1
+	WHEN 0610 THEN 1
+	WHEN 0613 THEN 1
+	WHEN 0815 THEN 1
+	WHEN 1005 THEN 1
+	WHEN 1101 THEN 1
+	WHEN 1201 THEN 1
+	WHEN 1208 THEN 1
+	WHEN 1225 THEN 1
+	ELSE ISHOLIDAY
+END,
+DESCRIPTIONHOLIDAY=
+CASE right(DATEKEY,4)
+	WHEN 0101 THEN 'New Year'
+	WHEN 0401 THEN 'Colonial Repression Martyrs Day'
+	WHEN 0402 THEN 'National Day of the Armed Struggle'
+	WHEN 0404 THEN 'Peace Day'
+	WHEN 0501 THEN 'Labour Day'
+	
+	WHEN 0601 THEN 'International Childrens Day'
+	WHEN 0917 THEN 'Founder of Nation and National Heroes Day'
+	WHEN 1102 THEN 'All Saints Day'
+	WHEN 1111 THEN 'Independence Day'
+
+	WHEN 1225 THEN 'Christmas'
+	ELSE DESCRIPTIONHOLIDAY
+END
+
+UPDATE DimDate SET 
+DESCRIPTIONMONTH=CONVERT(varchar(20),CALENDARYEAR)+' '+left([MONTH],3)
+
+UPDATE DimDate SET
+ISWORKDAY = 0
+WHERE	ISHOLIDAY = 1 or ISWEEKEND = 1
+
+
+UPDATE DimDate SET
+SEASON =
+CASE 
+	WHEN right(DATEKEY,4) between 0321 and 0620 THEN 'Spring'
+	WHEN right(DATEKEY,4) between 0621 and 0922 THEN 'Summer'
+	WHEN right(DATEKEY,4) between 0923 and 1221 THEN 'Autumn'
+	WHEN right(DATEKEY,4) between 1222 and 0320 THEN 'Winter'
+	
+ELSE SEASON end
+
+UPDATE DimDate SET
+
+

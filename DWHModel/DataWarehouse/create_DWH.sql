@@ -1,15 +1,8 @@
 /*==============================================================*/
 /* DBMS name:      Microsoft SQL Server 2012                    */
-/* Created on:     14/12/2015 22:05:01                          */
+/* Created on:     16/12/2015 00:25:06                          */
 /*==============================================================*/
-USE DWH
 
-if exists (select 1
-   from sys.sysreferences r join sys.sysobjects o on (o.id = r.constid and o.type = 'F')
-   where r.fkeyid = object_id('FACTTABLELINEITEM') and o.name = 'FK_FACTTABL_RELATIONS_DIMAGEGR')
-alter table FACTTABLELINEITEM
-   drop constraint FK_FACTTABL_RELATIONS_DIMAGEGR
-go
 
 if exists (select 1
    from sys.sysreferences r join sys.sysobjects o on (o.id = r.constid and o.type = 'F')
@@ -55,13 +48,6 @@ go
 
 if exists (select 1
    from sys.sysreferences r join sys.sysobjects o on (o.id = r.constid and o.type = 'F')
-   where r.fkeyid = object_id('FACTTABLERECEIPT') and o.name = 'FK_FACTTABL_RELAGEGRO_DIMAGEGR')
-alter table FACTTABLERECEIPT
-   drop constraint FK_FACTTABL_RELAGEGRO_DIMAGEGR
-go
-
-if exists (select 1
-   from sys.sysreferences r join sys.sysobjects o on (o.id = r.constid and o.type = 'F')
    where r.fkeyid = object_id('FACTTABLERECEIPT') and o.name = 'FK_FACTTABL_RELATIONS_DIMCLIEN')
 alter table FACTTABLERECEIPT
    drop constraint FK_FACTTABL_RELATIONS_DIMCLIEN
@@ -93,13 +79,6 @@ if exists (select 1
    where r.fkeyid = object_id('FACTTABLERECEIPT') and o.name = 'FK_FACTTABL_RELPAYMEN_DIMPAYME')
 alter table FACTTABLERECEIPT
    drop constraint FK_FACTTABL_RELPAYMEN_DIMPAYME
-go
-
-if exists (select 1
-            from  sysobjects
-           where  id = object_id('DIMAGEGROUP')
-            and   type = 'U')
-   drop table DIMAGEGROUP
 go
 
 if exists (select 1
@@ -158,15 +137,6 @@ if exists (select 1
             and   indid > 0
             and   indid < 255)
    drop index FACTTABLELINEITEM.RELATIONSHIP_GENDER_FK
-go
-
-if exists (select 1
-            from  sysindexes
-           where  id    = object_id('FACTTABLELINEITEM')
-            and   name  = 'RELATIONSHIP_AGEGROUP_FK'
-            and   indid > 0
-            and   indid < 255)
-   drop index FACTTABLELINEITEM.RELATIONSHIP_AGEGROUP_FK
 go
 
 if exists (select 1
@@ -251,15 +221,6 @@ go
 if exists (select 1
             from  sysindexes
            where  id    = object_id('FACTTABLERECEIPT')
-            and   name  = 'RELAGEGROUP_FK'
-            and   indid > 0
-            and   indid < 255)
-   drop index FACTTABLERECEIPT.RELAGEGROUP_FK
-go
-
-if exists (select 1
-            from  sysindexes
-           where  id    = object_id('FACTTABLERECEIPT')
             and   name  = 'RELGENDER_FK'
             and   indid > 0
             and   indid < 255)
@@ -283,16 +244,6 @@ if exists (select 1
 go
 
 /*==============================================================*/
-/* Table: DIMAGEGROUP                                           */
-/*==============================================================*/
-create table DIMAGEGROUP (
-   AGEGROUPKEY          numeric              identity,
-   AGEGROUP             nvarchar(50)         not null,
-   constraint PK_DIMAGEGROUP primary key (AGEGROUPKEY)
-)
-go
-
-/*==============================================================*/
 /* Table: DIMCLIENT                                             */
 /*==============================================================*/
 create table DIMCLIENT (
@@ -305,6 +256,8 @@ create table DIMCLIENT (
    EMAIL                varchar(50)          null,
    OCCUPATION           varchar(130)         null,
    JOB_FAMILY           varchar(100)         null,
+   VALIDFROM            date	             null,
+   VALIDTO              date	             null,
    constraint PK_DIMCLIENT primary key (CLIENTKEY)
 )
 go
@@ -423,7 +376,6 @@ create table FACTTABLELINEITEM (
    DATEKEY              int                  null,
    SECTIONKEY           numeric              not null,
    PRODUCTKEY           numeric              not null,
-   AGEGROUPKEY          numeric              null,
    CLIENTKEY            numeric              null,
    RECEIPTID            int                  null,
    DISCOUNTVALUE        int                  null,
@@ -484,16 +436,6 @@ create nonclustered index RELCLIENT_FK on FACTTABLELINEITEM (CLIENTKEY ASC)
 go
 
 /*==============================================================*/
-/* Index: RELATIONSHIP_AGEGROUP_FK                              */
-/*==============================================================*/
-
-
-
-
-create nonclustered index RELATIONSHIP_AGEGROUP_FK on FACTTABLELINEITEM (AGEGROUPKEY ASC)
-go
-
-/*==============================================================*/
 /* Index: RELATIONSHIP_GENDER_FK                                */
 /*==============================================================*/
 
@@ -511,14 +453,13 @@ create table FACTTABLERECEIPT (
    CLIENTKEY            numeric              null,
    GENDERKEY            numeric              null,
    PAYMENTTYPEKEY       numeric              not null,
-   AGEGROUPKEY          numeric              null,
    DATEKEY              int                  not null,
    STOREKEY             numeric              null,
    RECEIPTID            int                  not null,
    DISCOUNTVALUE        int                  null,
    TOTALVALUE           int                  null,
-   TRANSACTIONBEGHOUR   time               	 null,
-   TRANSACTIONENDHOUR   time             	 null,
+   TRANSACTIONBEGHOUR   time   	             null,
+   TRANSACTIONENDHOUR   time                 null,
    TRANSACTIONDURATION  int                  null,
    NUMBEROFITEMS        int                  null,
    NUMBEROFPRODUCTS     int                  null,
@@ -544,16 +485,6 @@ go
 
 
 create nonclustered index RELGENDER_FK on FACTTABLERECEIPT (GENDERKEY ASC)
-go
-
-/*==============================================================*/
-/* Index: RELAGEGROUP_FK                                        */
-/*==============================================================*/
-
-
-
-
-create nonclustered index RELAGEGROUP_FK on FACTTABLERECEIPT (AGEGROUPKEY ASC)
 go
 
 /*==============================================================*/
@@ -587,11 +518,6 @@ create nonclustered index RELATIONSHIP_11_FK on FACTTABLERECEIPT (CLIENTKEY ASC)
 go
 
 alter table FACTTABLELINEITEM
-   add constraint FK_FACTTABL_RELATIONS_DIMAGEGR foreign key (AGEGROUPKEY)
-      references DIMAGEGROUP (AGEGROUPKEY)
-go
-
-alter table FACTTABLELINEITEM
    add constraint FK_FACTTABL_RELATIONS_DIMGENDE foreign key (GENDERKEY)
       references DIMGENDER (GENDERKEY)
 go
@@ -619,11 +545,6 @@ go
 alter table FACTTABLELINEITEM
    add constraint FK_FACTTABL_RELSTORE_DIMSTORE foreign key (STOREKEY)
       references DIMSTORE (STOREKEY)
-go
-
-alter table FACTTABLERECEIPT
-   add constraint FK_FACTTABL_RELAGEGRO_DIMAGEGR foreign key (AGEGROUPKEY)
-      references DIMAGEGROUP (AGEGROUPKEY)
 go
 
 alter table FACTTABLERECEIPT

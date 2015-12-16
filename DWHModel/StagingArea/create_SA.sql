@@ -1,7 +1,6 @@
-use [DWHFinalProject]
 /*==============================================================*/
 /* DBMS name:      Microsoft SQL Server 2012                    */
-/* Created on:     14/12/2015 20:57:50                          */
+/* Created on:     16/12/2015 15:55:11                          */
 /*==============================================================*/
 
 
@@ -149,6 +148,13 @@ if exists (select 1
            where  id = object_id('OCCUPATION')
             and   type = 'U')
    drop table OCCUPATION
+go
+
+if exists (select 1
+            from  sysobjects
+           where  id = object_id('PAYMENTTRANSFORMED')
+            and   type = 'U')
+   drop table PAYMENTTRANSFORMED
 go
 
 if exists (select 1
@@ -459,6 +465,19 @@ create table OCCUPATION (
 go
 
 /*==============================================================*/
+/* Table: PAYMENTTRANSFORMED                                    */
+/*==============================================================*/
+create table PAYMENTTRANSFORMED (
+   PAYMENTTYPEID2       smallint             not null,
+   RECEIPTID2           int                  not null,
+   NOOFDIFFERENTPAYMENTS int                  null,
+   MAINPAYMENTTYPEID    smallint             null,
+   PAYMENTTYPEDESCRIPTION nvarchar(50)         null,
+   constraint PK_PAYMENTTRANSFORMED primary key (PAYMENTTYPEID2, RECEIPTID2)
+)
+go
+
+/*==============================================================*/
 /* Table: PAYMENT_TYPE                                          */
 /*==============================================================*/
 create table PAYMENT_TYPE (
@@ -644,7 +663,7 @@ create table RECEIPT__T_ (
    CLIENTID             int                  not null,
    STOREID              smallint             not null,
    POSID                int                  not null,
-   DATEOFSALE           date             null,
+   DATEOFSALE           date	             null,
    TRANSACTIONBEGHOUR   varchar(8)           null,
    TRANSACTIONENDHOUR   varchar(8)           null,
    DISCOUNTVALUE        int                  null,

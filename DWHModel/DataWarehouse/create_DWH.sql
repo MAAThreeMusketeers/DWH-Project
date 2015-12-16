@@ -1,6 +1,6 @@
 /*==============================================================*/
 /* DBMS name:      Microsoft SQL Server 2012                    */
-/* Created on:     16/12/2015 00:25:06                          */
+/* Created on:     16/12/2015 16:39:20                          */
 /*==============================================================*/
 
 
@@ -310,7 +310,6 @@ go
 create table DIMPAYMENT (
    PAYMENTTYPEKEY       numeric              identity,
    PAYMENTTYPEID        smallint             not null,
-   RECEIPTID            int                  not null,
    NOOFDIFFERENTPAYMENTS int                  not null,
    MAINPAYMENTTYPEID    smallint             not null,
    PAYMENTTYPEDESCRIPTION nvarchar(50)         null,
@@ -458,8 +457,8 @@ create table FACTTABLERECEIPT (
    RECEIPTID            int                  not null,
    DISCOUNTVALUE        int                  null,
    TOTALVALUE           int                  null,
-   TRANSACTIONBEGHOUR   time   	             null,
-   TRANSACTIONENDHOUR   time                 null,
+   TRANSACTIONBEGHOUR   time 	             null,
+   TRANSACTIONENDHOUR   time	             null,
    TRANSACTIONDURATION  int                  null,
    NUMBEROFITEMS        int                  null,
    NUMBEROFPRODUCTS     int                  null,

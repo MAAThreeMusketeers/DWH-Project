@@ -275,7 +275,6 @@ create table CLIENT (
    CLIENTCARD           smallint             null,
    GENDER               char(1)              null,
    DATEOFBIRTH          char(10)             null,
-   AGEGROUP             nvarchar(50)         not null,
    constraint PK_CLIENT primary key nonclustered (CLIENTID)
 )
 go
@@ -312,8 +311,8 @@ create table LINE_ITEM__TL_ (
    PRODUCTID            int                  not null,
    QUANTITY             int                  null,
    DISCOUNTVALUE        int                  null,
-   TOTALVALUE           int					null,
-   constraint PK_LINE_ITEM__TL_ primary key (RECEIPTID, PRODUCTID)
+   TOTALVALUE           smallint             null,
+   constraint PK_LINE_ITEM__TL_ primary key (RECEIPTID)
 )
 go
 
@@ -362,8 +361,8 @@ go
 create table PAYMENT__TP_ (
    RECEIPTID            int                  not null,
    PAYMENTTYPEID        smallint             not null,
-   TOTALVALUE           int             null,
-   constraint PK_PAYMENT__TP_ primary key (RECEIPTID, PAYMENTTYPEID)
+   TOTALVALUE           smallint             null,
+   constraint PK_PAYMENT__TP_ primary key (RECEIPTID)
 )
 go
 
@@ -421,7 +420,7 @@ go
 /*==============================================================*/
 create table PRODUCT (
    PRODUCTID            int                  not null,
-   PRODUCTDESCRIPTION   nvarchar(70)         null,
+   PRODUCTDESCRIPTION   nvarchar(200)         null,
    PRODUCTCLASS         char(1)              null,
    PRODUCTSUBCLASS      char(1)              null,
    DEPARTMENTID         char(2)              not null,

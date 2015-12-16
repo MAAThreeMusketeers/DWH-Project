@@ -26,7 +26,7 @@
           <SSIS:Property SSIS:Name="CreatorComputerName">BEYKA-THINK</SSIS:Property>
           <SSIS:Property SSIS:Name="Description">
           </SSIS:Property>
-          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAKNm856kSEkusC23U/ubWXAAAAAACAAAAAAAQZgAAAAEAACAAAACOfRjp0jD77bF6c1S9t93iDHsmQ1RiKozanoZkBcMJQQAAAAAOgAAAAAIAACAAAAADenpjjk8vUfG+uXiDqdZSjI0EhVmQ5G9smD8roxPMp5AAAACAQGlqcQXEooLWl41V+2MZZB8GYFWT1McGi/qx3wSnP01AlVeStV5Fz5UvTTVGVaessaN6uUPFdopJHyQ9+PFDgoiCG2J+QvJ0sWqJ4JGnC6D1fzp8GzEk4Nh3HrB5VLeBMum6TYKVv6iuAQ6qlWKIdO6bq0Gv5693/qAAdoNZVnHwNr92HJtg791CuvfgmnVAAAAAE94f3LRAsM6yPiXczepd9bzJEVp9zC4GgY1dt4EZ7l3l2B3xQQWMypZk/hIreddqAZ7SO3yWOw/2lponrsXoSg==</SSIS:Property>
+          <SSIS:Property SSIS:Name="PasswordVerifier" SSIS:Sensitive="1">AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAB+d6A6wdiUaAlJcruDaQNQAAAAACAAAAAAAQZgAAAAEAACAAAAAoTknHF8wSZSs1VnP5nKLtdtABb4XQ5aJnSYM44xMNDQAAAAAOgAAAAAIAACAAAAAX+tky8uL979BOepFlHZMltK238Q2TsnI0DjSuFvmedpAAAAA7tAonUaSa5Kf08sWbm4hnhs6XEg3nAWhsoCi3lCQRnWbIunRAmyU/HzKpnoHAfJsxy2dIghm27roTNM22FtGtljXPb5hMmlZYQhXcUTloaBbmFh3NpG8Ja6D67NRDAw8ewfmy7iIxdcTCbi1/mtfdsxdpWhxARBW9wND7+h9rD2vvHX9iuhZLfS40LV8otGxAAAAA++UicI9Y8M2bZqw7N7PSppzUmxX2Cc6n6nckReJjK5mAEM6ihfxD4mQ2hMyubEq/InLkn/NCwX9ZpPfKtATRgA==</SSIS:Property>
           <SSIS:Property SSIS:Name="FormatVersion">1</SSIS:Property>
         </SSIS:Properties>
         <SSIS:Packages>
@@ -53,7 +53,7 @@
                 <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                 <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                 <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="Value">Data Source=ANDRAS\SQLEXPRESS;Initial Catalog=DWHFinalProject;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;</SSIS:Property>
+                <SSIS:Property SSIS:Name="Value">Data Source=PC-CAROLINA\SQLEXPRESS;Initial Catalog=DWHFinalProject;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;</SSIS:Property>
                 <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
               </SSIS:Properties>
             </SSIS:Parameter>
@@ -126,7 +126,7 @@
                 <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                 <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                 <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="Value">Data Source=ANDRAS\SQLEXPRESS;Initial Catalog=DWH;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;</SSIS:Property>
+                <SSIS:Property SSIS:Name="Value">Data Source=PC-CAROLINA\SQLEXPRESS;Initial Catalog=DWH;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;</SSIS:Property>
                 <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
               </SSIS:Properties>
             </SSIS:Parameter>
@@ -213,10 +213,10 @@
                 <SSIS:Property SSIS:Name="Name">INFOload</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionBuild">129</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">134</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionComments">
                 </SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionGUID">{B22B79B0-5CBF-4D03-A08E-8921AD5315A6}</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{EEB2DE58-E14E-4CA2-B189-C41F0CDE27D6}</SSIS:Property>
                 <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
                 <SSIS:Property SSIS:Name="Description">
                 </SSIS:Property>
@@ -729,7 +729,7 @@
                     <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Value">Provider=Microsoft.ACE.OLEDB.12.0;Data Source=F:\Dropbox\NOVA\1st\DateWarehousing\Final_Project\Data\Input Data\customers_extra.xlsx;Extended Properties="EXCEL 12.0 XML;HDR=YES";</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Value">Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\Carolina\Desktop\FlatFilesInput\customers_extra.xlsx;Extended Properties="EXCEL 12.0 XML;HDR=YES";</SSIS:Property>
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
@@ -802,7 +802,7 @@
                     <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Value">F:\Dropbox\NOVA\1st\DateWarehousing\Final_Project\Data\Input Data\customers_extra.xlsx</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Value">C:\Users\Carolina\Desktop\FlatFilesInput\customers_extra.xlsx</SSIS:Property>
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
@@ -3816,10 +3816,10 @@
                 <SSIS:Property SSIS:Name="Name">Extract_to_SA</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionBuild">72</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">74</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionComments">
                 </SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionGUID">{0C0BB34B-BA70-4914-B35C-DCD1A95E5208}</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{CFCA2509-77C6-4488-B4B3-EF2EA7A1CA2E}</SSIS:Property>
                 <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
                 <SSIS:Property SSIS:Name="Description">
                 </SSIS:Property>
@@ -5781,10 +5781,10 @@
                 <SSIS:Property SSIS:Name="Name">Load_to_DWH</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMajor">1</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionMinor">0</SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionBuild">122</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionBuild">170</SSIS:Property>
                 <SSIS:Property SSIS:Name="VersionComments">
                 </SSIS:Property>
-                <SSIS:Property SSIS:Name="VersionGUID">{09D2F0DA-5C9E-4442-A550-48D7172A1E19}</SSIS:Property>
+                <SSIS:Property SSIS:Name="VersionGUID">{2809ECFE-EE76-44ED-BC15-54DD0B7FBEF6}</SSIS:Property>
                 <SSIS:Property SSIS:Name="PackageFormatVersion">8</SSIS:Property>
                 <SSIS:Property SSIS:Name="Description">
                 </SSIS:Property>
@@ -5802,7 +5802,7 @@
                     <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Value">Data Source=ANDRAS\SQLEXPRESS;Initial Catalog=DWH;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Value">Data Source=PC-CAROLINA\SQLEXPRESS;Initial Catalog=DWH;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;</SSIS:Property>
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
@@ -5875,7 +5875,7 @@
                     <SSIS:Property SSIS:Name="IncludeInDebugDump">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Required">0</SSIS:Property>
                     <SSIS:Property SSIS:Name="Sensitive">0</SSIS:Property>
-                    <SSIS:Property SSIS:Name="Value">Data Source=ANDRAS\SQLEXPRESS;Initial Catalog=DWHFinalProject;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;</SSIS:Property>
+                    <SSIS:Property SSIS:Name="Value">Data Source=PC-CAROLINA\SQLEXPRESS;Initial Catalog=DWHFinalProject;Provider=SQLNCLI11.1;Integrated Security=SSPI;Auto Translate=False;</SSIS:Property>
                     <SSIS:Property SSIS:Name="DataType">18</SSIS:Property>
                   </SSIS:Properties>
                 </SSIS:Parameter>
@@ -6307,17 +6307,17 @@
           <ConfigurationSetting>
             <Id>LastModifiedTime</Id>
             <Name>LastModifiedTime</Name>
-            <Value xsi:type="xsd:dateTime">2015-12-14T22:45:12.371154Z</Value>
+            <Value xsi:type="xsd:dateTime">2015-12-15T22:19:40.7197614Z</Value>
           </ConfigurationSetting>
           <ConfigurationSetting>
             <Id>{e31f25eb-6cd7-4ac6-bb92-94bd7ec24573}</Id>
             <Name>Project::FlatFilesInput</Name>
-            <Value xsi:type="xsd:string">F:\Dropbox\NOVA\1st\DateWarehousing\Final_Project\Data\Input Data</Value>
+            <Value xsi:type="xsd:string">C:\Users\Carolina\Desktop\FlatFilesInput</Value>
           </ConfigurationSetting>
           <ConfigurationSetting>
             <Id>{a1436211-ef73-48ea-8b8d-a4f0e66ddb15}</Id>
             <Name>Project::ServerName</Name>
-            <Value xsi:type="xsd:string">ANDRAS\SQLEXPRESS</Value>
+            <Value xsi:type="xsd:string">PC-CAROLINA\SQLEXPRESS</Value>
           </ConfigurationSetting>
         </ParameterConfigurationValues>
       </Options>

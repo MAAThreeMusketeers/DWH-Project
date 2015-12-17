@@ -464,16 +464,17 @@ create table OCCUPATION (
 )
 go
 
+
 /*==============================================================*/
 /* Table: PAYMENTTRANSFORMED                                    */
 /*==============================================================*/
 create table PAYMENTTRANSFORMED (
-   PAYMENTTYPEID2       smallint             not null,
-   RECEIPTID2           int                  not null,
+   PAYMENTTYPEID       smallint             not null,
+   RECEIPTID           int                  not null,
    NOOFDIFFERENTPAYMENTS int                  null,
    MAINPAYMENTTYPEID    smallint             null,
    PAYMENTTYPEDESCRIPTION nvarchar(50)         null,
-   constraint PK_PAYMENTTRANSFORMED primary key (PAYMENTTYPEID2, RECEIPTID2)
+   constraint PK_PAYMENTTRANSFORMED primary key (PAYMENTTYPEID, RECEIPTID)
 )
 go
 

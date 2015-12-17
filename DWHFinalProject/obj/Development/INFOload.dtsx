@@ -32,7 +32,7 @@
           DTS:RowDelimiter=""
           DTS:TextQualifier="_x003C_none_x003E_"
           DTS:CodePage="1252"
-          DTS:ConnectionString="C:\Users\Carolina\Desktop\FlatFilesInput\Categories.txt">
+          DTS:ConnectionString="F:\Dropbox\NOVA\1st\DateWarehousing\Final_Project\Data\Input Data\Categories.txt">
           <DTS:FlatFileColumns>
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -89,7 +89,7 @@
           DTS:RowDelimiter=""
           DTS:TextQualifier="_x003C_none_x003E_"
           DTS:CodePage="1252"
-          DTS:ConnectionString="C:\Users\Carolina\Desktop\FlatFilesOutput\CategoryNoMatch.txt">
+          DTS:ConnectionString="F:\Dropbox\NOVA\1st\DateWarehousing\Final_Project\Data\Output Data\CategoryNoMatch.txt">
           <DTS:FlatFileColumns>
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -155,7 +155,7 @@
           DTS:RowDelimiter=""
           DTS:TextQualifier="_x003C_none_x003E_"
           DTS:CodePage="1252"
-          DTS:ConnectionString="C:\Users\Carolina\Desktop\FlatFilesInput\Clients.txt">
+          DTS:ConnectionString="F:\Dropbox\NOVA\1st\DateWarehousing\Final_Project\Data\Input Data\Clients.txt">
           <DTS:FlatFileColumns>
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -206,7 +206,7 @@
         DTS:Name="ExcelFilePath">@[$Project::FlatFilesInput]   + "\\customers_extra.xlsx"</DTS:PropertyExpression>
       <DTS:ObjectData>
         <DTS:ConnectionManager
-          DTS:ConnectionString="Provider=Microsoft.ACE.OLEDB.12.0;Data Source=C:\Users\Carolina\Desktop\FlatFilesInput\customers_extra.xlsx;Extended Properties=&quot;EXCEL 12.0 XML;HDR=YES&quot;;" />
+          DTS:ConnectionString="Provider=Microsoft.ACE.OLEDB.12.0;Data Source=F:\Dropbox\NOVA\1st\DateWarehousing\Final_Project\Data\Input Data\customers_extra.xlsx;Extended Properties=&quot;EXCEL 12.0 XML;HDR=YES&quot;;" />
       </DTS:ObjectData>
     </DTS:ConnectionManager>
     <DTS:ConnectionManager
@@ -224,7 +224,7 @@
           DTS:RowDelimiter=""
           DTS:TextQualifier="_x003C_none_x003E_"
           DTS:CodePage="1252"
-          DTS:ConnectionString="C:\Users\Carolina\Desktop\FlatFilesOutput\ClientExtraNoMatch.csv">
+          DTS:ConnectionString="F:\Dropbox\NOVA\1st\DateWarehousing\Final_Project\Data\Output Data\ClientExtraNoMatch.csv">
           <DTS:FlatFileColumns>
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -295,7 +295,7 @@
           DTS:RowDelimiter=""
           DTS:TextQualifier="_x003C_none_x003E_"
           DTS:CodePage="1252"
-          DTS:ConnectionString="C:\Users\Carolina\Desktop\FlatFilesInput\Departments.txt">
+          DTS:ConnectionString="F:\Dropbox\NOVA\1st\DateWarehousing\Final_Project\Data\Input Data\Departments.txt">
           <DTS:FlatFileColumns>
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -334,7 +334,7 @@
           DTS:RowDelimiter=""
           DTS:TextQualifier="_x003C_none_x003E_"
           DTS:CodePage="1252"
-          DTS:ConnectionString="C:\Users\Carolina\Desktop\FlatFilesInput\PaymentTypes.txt">
+          DTS:ConnectionString="F:\Dropbox\NOVA\1st\DateWarehousing\Final_Project\Data\Input Data\PaymentTypes.txt">
           <DTS:FlatFileColumns>
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -373,7 +373,7 @@
           DTS:RowDelimiter=""
           DTS:TextQualifier="_x003C_none_x003E_"
           DTS:CodePage="1252"
-          DTS:ConnectionString="C:\Users\Carolina\Desktop\FlatFilesInput\POS.txt">
+          DTS:ConnectionString="F:\Dropbox\NOVA\1st\DateWarehousing\Final_Project\Data\Input Data\POS.txt">
           <DTS:FlatFileColumns>
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -431,7 +431,7 @@
           DTS:RowDelimiter=""
           DTS:TextQualifier="_x003C_none_x003E_"
           DTS:CodePage="1252"
-          DTS:ConnectionString="C:\Users\Carolina\Desktop\FlatFilesOutput\POSNoMatch.txt">
+          DTS:ConnectionString="F:\Dropbox\NOVA\1st\DateWarehousing\Final_Project\Data\Output Data\POSNoMatch.txt">
           <DTS:FlatFileColumns>
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -489,7 +489,7 @@
           DTS:RowDelimiter=""
           DTS:TextQualifier="_x003C_none_x003E_"
           DTS:CodePage="1252"
-          DTS:ConnectionString="C:\Users\Carolina\Desktop\FlatFilesOutput\ProductErrorLog.txt">
+          DTS:ConnectionString="F:\Dropbox\NOVA\1st\DateWarehousing\Final_Project\Data\Output Data\ProductErrorLog.txt">
           <DTS:FlatFileColumns>
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -598,7 +598,7 @@
           DTS:RowDelimiter=""
           DTS:TextQualifier="_x003C_none_x003E_"
           DTS:CodePage="1252"
-          DTS:ConnectionString="C:\Users\Carolina\Desktop\FlatFilesOutput\ProductNoMatch.txt">
+          DTS:ConnectionString="F:\Dropbox\NOVA\1st\DateWarehousing\Final_Project\Data\Output Data\ProductNoMatch.txt">
           <DTS:FlatFileColumns>
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -691,7 +691,7 @@
           DTS:RowDelimiter=""
           DTS:TextQualifier="_x003C_none_x003E_"
           DTS:CodePage="1252"
-          DTS:ConnectionString="C:\Users\Carolina\Desktop\FlatFilesInput\Products.txt">
+          DTS:ConnectionString="F:\Dropbox\NOVA\1st\DateWarehousing\Final_Project\Data\Input Data\Products.txt">
           <DTS:FlatFileColumns>
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -784,7 +784,7 @@
           DTS:RowDelimiter=""
           DTS:TextQualifier="_x003C_none_x003E_"
           DTS:CodePage="1252"
-          DTS:ConnectionString="C:\Users\Carolina\Desktop\FlatFilesOutput\SectionNoMatch.txt">
+          DTS:ConnectionString="F:\Dropbox\NOVA\1st\DateWarehousing\Final_Project\Data\Output Data\SectionNoMatch.txt">
           <DTS:FlatFileColumns>
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -841,7 +841,7 @@
           DTS:RowDelimiter=""
           DTS:TextQualifier="_x003C_none_x003E_"
           DTS:CodePage="1252"
-          DTS:ConnectionString="C:\Users\Carolina\Desktop\FlatFilesInput\Sections.txt">
+          DTS:ConnectionString="F:\Dropbox\NOVA\1st\DateWarehousing\Final_Project\Data\Input Data\Sections.txt">
           <DTS:FlatFileColumns>
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -889,7 +889,7 @@
           DTS:RowDelimiter=""
           DTS:TextQualifier="_x003C_none_x003E_"
           DTS:CodePage="1252"
-          DTS:ConnectionString="C:\Users\Carolina\Desktop\FlatFilesInput\Stores.txt">
+          DTS:ConnectionString="F:\Dropbox\NOVA\1st\DateWarehousing\Final_Project\Data\Input Data\Stores.txt">
           <DTS:FlatFileColumns>
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -928,7 +928,7 @@
           DTS:RowDelimiter=""
           DTS:TextQualifier="_x003C_none_x003E_"
           DTS:CodePage="1252"
-          DTS:ConnectionString="C:\Users\Carolina\Desktop\FlatFilesOutput\SubcategoryNoMatch.txt">
+          DTS:ConnectionString="F:\Dropbox\NOVA\1st\DateWarehousing\Final_Project\Data\Output Data\SubcategoryNoMatch.txt">
           <DTS:FlatFileColumns>
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -1003,7 +1003,7 @@
           DTS:RowDelimiter=""
           DTS:TextQualifier="_x003C_none_x003E_"
           DTS:CodePage="1252"
-          DTS:ConnectionString="C:\Users\Carolina\Desktop\FlatFilesInput\SubCategories.txt">
+          DTS:ConnectionString="F:\Dropbox\NOVA\1st\DateWarehousing\Final_Project\Data\Input Data\SubCategories.txt">
           <DTS:FlatFileColumns>
             <DTS:FlatFileColumn
               DTS:ColumnType="Delimited"
@@ -5071,19 +5071,19 @@ where [refTable].[OCCUPATIONID] = ?</property>
               startId="Package\Data Flow Client\Lookup exists.Outputs[Lookup Match Output]" />
             <path
               refId="Package\Data Flow Client.Paths[Lookup No Match Output2]"
+              endId="Package\Data Flow Client\Client Destination.Inputs[OLE DB Destination Input]"
+              name="Lookup No Match Output"
+              startId="Package\Data Flow Client\Lookup exists.Outputs[Lookup No Match Output]" />
+            <path
+              refId="Package\Data Flow Client.Paths[Lookup No Match Output]"
               endId="Package\Data Flow Client\OLE DB Command.Inputs[OLE DB Command Input]"
               name="Lookup No Match Output"
               startId="Package\Data Flow Client\Lookup.Outputs[Lookup No Match Output]" />
             <path
-              refId="Package\Data Flow Client.Paths[Lookup No Match Output]"
+              refId="Package\Data Flow Client.Paths[Lookup No Match Output1]"
               endId="Package\Data Flow Client\ClientExtraNoMatch.Inputs[Flat File Destination Input]"
               name="Lookup No Match Output"
               startId="Package\Data Flow Client\LookupOccupation.Outputs[Lookup No Match Output]" />
-            <path
-              refId="Package\Data Flow Client.Paths[Lookup No Match Output1]"
-              endId="Package\Data Flow Client\Client Destination.Inputs[OLE DB Destination Input]"
-              name="Lookup No Match Output"
-              startId="Package\Data Flow Client\Lookup exists.Outputs[Lookup No Match Output]" />
             <path
               refId="Package\Data Flow Client.Paths[Merge Join Output]"
               endId="Package\Data Flow Client\Lookup exists.Inputs[Lookup Input]"
@@ -5101,14 +5101,14 @@ where [refTable].[OCCUPATIONID] = ?</property>
               startId="Package\Data Flow Client\Conditional Split.Outputs[OCCUPATIONMISSING]" />
             <path
               refId="Package\Data Flow Client.Paths[Sort Output1]"
-              endId="Package\Data Flow Client\Merge Join.Inputs[Merge Join Left Input]"
-              name="Sort Output"
-              startId="Package\Data Flow Client\Sort Client.Outputs[Sort Output]" />
-            <path
-              refId="Package\Data Flow Client.Paths[Sort Output]"
               endId="Package\Data Flow Client\Merge Join.Inputs[Merge Join Right Input]"
               name="Sort Output"
               startId="Package\Data Flow Client\Sort Extra.Outputs[Sort Output]" />
+            <path
+              refId="Package\Data Flow Client.Paths[Sort Output]"
+              endId="Package\Data Flow Client\Merge Join.Inputs[Merge Join Left Input]"
+              name="Sort Output"
+              startId="Package\Data Flow Client\Sort Client.Outputs[Sort Output]" />
             <path
               refId="Package\Data Flow Client.Paths[Union All Output 1]"
               endId="Package\Data Flow Client\Sort Extra.Inputs[Sort Input]"
@@ -12165,7 +12165,7 @@ where [refTable].[SUBCATEGORYID] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Data Flow Client.Paths[Sort Output1]"
+          Id="Package\Data Flow Client.Paths[Sort Output]"
           TopLeft="108,347">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -12199,7 +12199,7 @@ where [refTable].[SUBCATEGORYID] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Data Flow Client.Paths[Sort Output]"
+          Id="Package\Data Flow Client.Paths[Sort Output1]"
           TopLeft="328,454">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -12303,7 +12303,7 @@ where [refTable].[SUBCATEGORYID] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Data Flow Client.Paths[Lookup No Match Output]"
+          Id="Package\Data Flow Client.Paths[Lookup No Match Output1]"
           TopLeft="654.75,318">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -12327,7 +12327,7 @@ where [refTable].[SUBCATEGORYID] = ?</property>
           </EdgeLayout.Labels>
         </EdgeLayout>
         <EdgeLayout
-          Id="Package\Data Flow Client.Paths[Lookup No Match Output1]"
+          Id="Package\Data Flow Client.Paths[Lookup No Match Output2]"
           TopLeft="255,560">
           <EdgeLayout.Curve>
             <mssgle:Curve
@@ -12581,7 +12581,7 @@ where [refTable].[SUBCATEGORYID] = ?</property>
           Id="Package\Data Flow Client\OLE DB Command"
           TopLeft="95,721" />
         <EdgeLayout
-          Id="Package\Data Flow Client.Paths[Lookup No Match Output2]"
+          Id="Package\Data Flow Client.Paths[Lookup No Match Output]"
           TopLeft="175.25,662">
           <EdgeLayout.Curve>
             <mssgle:Curve
